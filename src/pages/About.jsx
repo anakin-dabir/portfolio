@@ -16,17 +16,17 @@ const About = () => {
 				<div className='w-full border border-borderColor md:w-1/4 gap-1 md:gap-[3px] flex flex-col  md:px-0 sticky'>
 					<Accordion items={accordionItems} />
 				</div>
-				{/* <div
+				<div
 					className={`overflow-hidden border border-borderColor flex flex-1 h-full w-full flex-col pt-4 md:pt-0  transition-opacity ${
 						isActive ? 'opacity-1' : 'opacity-0'
 					}`}>
 					<div className='h-11 flex text-textInactive'>
 						<div className='px-10  flex items-center bg-dark border-b border-borderColor '>profile-info</div>
-					</div> */}
-				<div className='bg-dark flex-1 px-7 py-6'></div>
+					</div>
+					<div className='bg-dark flex-1 px-7 py-6'></div>
 
-				{/* <SyntaxHighlighter>
-							{`const This is called as the brilliant sorcerer of this century dafa sdf dfs dfs ds df
+					<SyntaxHighlighter>
+						{`const This is called as the brilliant sorcerer of this century dafa sdf dfs dfs ds df
 This is called as the brilliant sorcerer  -->century asdgfjgasdjgsdajfasdjgfadsfasgdgdjfgajhuasgdfasdhjfgasd
 is called as the brilliant sorcerer  -->century -->century -->century asdgfjgasdjgsdajfasdjgfadsfasgdgdjfgajhsdaa
 is called as the brilliant sorcerer  century
@@ -36,9 +36,9 @@ This is called as the brilliant sorcerer of this century
 This is called as the brilliant sorcerer of this century
 This is called a
 This is called as the brilliant sorcerer of this century`}
-						</SyntaxHighlighter> */}
+					</SyntaxHighlighter>
+				</div>
 			</div>
-			{/* </div> */}
 			{/* <button onClick={() => setActive((prev) => !prev)}>Btun</button> */}
 		</>
 	);
