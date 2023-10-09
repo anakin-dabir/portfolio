@@ -130,7 +130,7 @@ function validateSnakeHead(snake, head) {
 	}
 
 	if (
-		head.positionX >= 0 &&
+		head.positionX >= 1 &&
 		head.positionX <= 30 &&
 		head.positionY >= 1 &&
 		head.positionY <= 51
@@ -236,7 +236,7 @@ export default function Game() {
 				<NutIcon className='absolute top-1.5 right-1.5' />
 				<NutIcon className='absolute top-1.5 left-1.5' />
 				<div className='h-full w-full flex justify-between'>
-					<div className='bg-[#011627D6] h-full w-[238px] rounded-md relative'>
+					<div className='bg-[#011627D6] h-full w-[238px] overflow-hidden rounded-md relative'>
 						{(gameOver || gameWon || paused) && (
 							<div className='w-full h-12 z-20 bg-black/30 text-xl absolute top-2/3 box-center'>
 								<p className={`${(gameOver && 'text-secondary') || ((gameWon || paused) && 'text-primary')}`}>
@@ -266,16 +266,6 @@ export default function Game() {
 										→
 									</ArrowButton>
 								</div>
-								{/* <ArrowButton onClick={startGame} disabled={gameOver}>
-									{isStarted ? '⏯' : ''}
-								</ArrowButton>
-								<ArrowButton onClick={stopGame}>.</ArrowButton>
-								<Dot />
-								<Dot />
-								<Dot />
-								<Dot />
-								<Dot />
-								<Dot /> */}
 							</div>
 						</div>
 						<div className='flex flex-col text-sm gap-2 p-1'>
