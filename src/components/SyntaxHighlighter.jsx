@@ -7,17 +7,20 @@ const SyntaxHighlighter = ({ children }) => {
 			language='text'
 			wrapLongLines
 			wrapLines
-			className='font-sans overflow-y-auto [&>*]:font-sans [&>*]:text-textInactive'
+			// showLineNumbers
+			lineNumberStyle={{ paddingRight: 0 }}
+			className='bg-transparent text-textInactive !overflow-x-hidden h-[67vh] [&>*]:text-textInactive [&>*]:font-sans'
 			customStyle={{
 				backgroundColor: 'transparent',
-				overflowX: 'hidden',
-				overflowY: 'auto',
+				// overflowX: 'hidden',
+				// overflowY: 'auto',
 				padding: 0,
-				width: '100%',
-				height: '100%',
-				flex: 1,
+				// width: '100%',
+				// height: '100%',
+				// flex: 1,
 			}}
-			style={atelierSulphurpoolDark}>
+			// style={atelierSulphurpoolDark}
+		>
 			{children}
 		</Highlighter>
 	);

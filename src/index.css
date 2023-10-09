@@ -225,3 +225,13 @@ p {
 		transform: translateX(95%);
 	} */
 }
+
+/* Define the scrollbar track (the background) */
+::-webkit-scrollbar {
+	width: 1.5px;
+}
+
+/* Define the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+	background-color: #1e2d3d; /* Color of the thumb */
+}

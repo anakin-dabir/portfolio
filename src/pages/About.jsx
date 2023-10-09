@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import File from '../assets/mac.png';
 import SyntaxHighlighter from '../components/SyntaxHighlighter';
+import Test from '../Test';
 
 const About = () => {
 	const [isActive, setActive] = useState(true);
@@ -13,30 +14,45 @@ const About = () => {
 	return (
 		<>
 			<div className='flex justify-between flex-1 flex-col md:flex-row h-full w-full px-2 py-4'>
-				<div className='w-full border border-borderColor md:w-1/4 gap-1 md:gap-[3px] flex flex-col  md:px-0 sticky'>
+				<div className='w-full border border-borderColor border-collapse md:w-1/4 gap-1 md:gap-[3px] flex flex-col  md:px-0 sticky'>
 					<Accordion items={accordionItems} />
 				</div>
 				<div
-					className={`overflow-hidden border border-borderColor flex flex-1 h-full w-full flex-col pt-4 md:pt-0  transition-opacity ${
+					className={`overflow-hidden border border-borderColor border-collapse flex flex-1 flex-col pt-4 md:pt-0  transition-opacity ${
 						isActive ? 'opacity-1' : 'opacity-0'
 					}`}>
 					<div className='h-11 flex text-textInactive'>
 						<div className='px-10  flex items-center bg-dark border-b border-borderColor '>profile-info</div>
 					</div>
-					<div className='bg-dark flex-1 px-7 py-6'></div>
+					<div className='bg-dark flex-1  px-5 py-6'>
+						<SyntaxHighlighter>
+							{`--> About Me
+Hello, I'm [Your Name], a passionate Frontend React Developer and Software Engineer with a keen eye for creating elegant and responsive user interfaces. I have a strong foundation in modern web technologies and a deep love for crafting exceptional digital experiences.
 
-					<SyntaxHighlighter>
-						{`const This is called as the brilliant sorcerer of this century dafa sdf dfs dfs ds df
-This is called as the brilliant sorcerer  -->century asdgfjgasdjgsdajfasdjgfadsfasgdgdjfgajhuasgdfasdhjfgasd
-is called as the brilliant sorcerer  -->century -->century -->century asdgfjgasdjgsdajfasdjgfadsfasgdgdjfgajhsdaa
-is called as the brilliant sorcerer  century
-is called as the brilliant sorcerer  century
-This is called as the brilliant sorcerer of this century
-This is called as the brilliant sorcerer of this century
-This is called as the brilliant sorcerer of this century
-This is called a
-This is called as the brilliant sorcerer of this century`}
-					</SyntaxHighlighter>
+--> What I Do
+I specialize in crafting delightful user interfaces using React.js, JavaScript, and related technologies. My goal is to transform complex ideas into clean, user-friendly interfaces that not only look great but also perform seamlessly across various devices and browsers.
+
+My expertise includes:
+- **React Development:** I have a solid understanding of React's core concepts, and I'm experienced in building reusable components, state management, and routing to create dynamic web applications.
+- **Responsive Design:** I'm skilled in creating responsive layouts that adapt gracefully to different screen sizes, ensuring a consistent user experience on desktops, tablets, and mobile devices.
+- **Cross-Browser Compatibility:** I'm committed to writing clean, cross-browser-compatible code to ensure that websites and web apps function flawlessly for all users.
+- **Optimized Performance:** I focus on optimizing website performance, ensuring fast load times and smooth interactions to enhance the user experience.
+- **Collaboration:** I enjoy working collaboratively with cross-functional teams, including designers, backend developers, and project managers, to bring ideas to life.
+
+--> My Passion
+My passion for coding goes beyond my work hours. I'm constantly learning and exploring new technologies, frameworks, and design trends to stay at the forefront of the ever-evolving web development landscape. Whether it's experimenting with the latest React libraries or diving into the intricacies of web animations, I thrive on pushing the boundaries of what's possible in web development.
+
+--> Let's Connect
+I'm always open to new opportunities, exciting projects, and collaborations. If you're interested in working together or have any questions, feel free to reach out to me. Let's create something amazing together!
+
+[Contact Me](#) | [GitHub](https://github.com/yourusername) | [LinkedIn](https://www.linkedin.com/in/yourname)
+
+
+
+`}
+						</SyntaxHighlighter>
+						{/* <Test /> */}
+					</div>
 				</div>
 			</div>
 			{/* <button onClick={() => setActive((prev) => !prev)}>Btun</button> */}

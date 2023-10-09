@@ -8,7 +8,7 @@ import Wrapper from './components/Wrapper';
 const App = () => {
 	return (
 		<>
-			<BrowserRouter>
+			<BrowserRouter basename={process.env.PUBLIC_URL}>
 				<Wrapper>
 					<Routes>
 						<Route path='/' element={<Home />} />
