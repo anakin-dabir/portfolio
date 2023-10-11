@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import Highlighter from 'react-syntax-highlighter';
-import { atelierSulphurpoolDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 const SyntaxHighlighter = ({ children }) => {
 	const [height, setHeight] = useState(
