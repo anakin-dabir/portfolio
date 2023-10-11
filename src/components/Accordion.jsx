@@ -1,4 +1,6 @@
 import useActiveIndex from '../hooks/useActiveIndex';
+import SideBarContent from './SideBarContent';
+
 const Accordion = ({ items, handleFileClick, file }) => {
 	const { activeIndex, handleItemClick } = useActiveIndex();
 
@@ -19,3 +21,4 @@ const Accordion = ({ items, handleFileClick, file }) => {
 		</div>
 	);
 };
+export default Accordion;

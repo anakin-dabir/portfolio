@@ -8,10 +8,6 @@ const useFileActive = () => {
 		fileContent: '',
 	};
 	const [file, setActiveFile] = useState(initialFile);
-	useEffect(() => {
-		console.log(file);
-	}, [file]);
-
 	const handleFileClick = (sectionIndex, activeIndex, fileName, fileContent) => {
 		if (activeIndex !== file.activeIndex) {
 			setActiveFile({ sectionIndex, activeIndex, fileName, fileContent });
