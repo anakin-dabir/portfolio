@@ -228,10 +228,12 @@ p {
 
 /* Define the scrollbar track (the background) */
 ::-webkit-scrollbar {
-	width: 1.5px;
+	width: 3px;
 }
 
-/* Define the scrollbar thumb (the draggable part) */
 ::-webkit-scrollbar-thumb {
-	background-color: #1e2d3d; /* Color of the thumb */
+	background-color: #1e2d3d;
+}
+::-webkit-scrollbar-track {
+	background-color: #011627;
 }

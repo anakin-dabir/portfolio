@@ -6,15 +6,14 @@ import Test from '../Test';
 const About = () => {
 	const [isActive, setActive] = useState(true);
 	const accordionItems = [
-		{ title: 'Item 1', content: 'Content for Item 1' },
-		{ title: 'Item 2', content: 'Content for Item 2' },
-		{ title: 'Item 3', content: 'Content for Item 3' },
+		{ title: 'Personal Info', content: 'Content for Item 1' },
+		{ title: 'Contacts', content: 'Content for Item 2' },
 	];
 
 	return (
 		<>
 			<div className='flex justify-between flex-1 flex-col md:flex-row h-full w-full px-2 py-4'>
-				<div className='w-full border border-borderColor border-collapse md:w-1/4 gap-1 md:gap-[3px] flex flex-col  md:px-0 sticky'>
+				<div className='w-full border border-borderColor border-collapse md:w-1/3 lg:w-[25%] 2xl:w-[18%]  gap-1 md:gap-[3px] flex flex-col  md:px-0 sticky'>
 					<Accordion items={accordionItems} />
 				</div>
 				<div
@@ -45,7 +44,7 @@ My passion for coding goes beyond my work hours. I'm constantly learning and exp
 --> Let's Connect
 I'm always open to new opportunities, exciting projects, and collaborations. If you're interested in working together or have any questions, feel free to reach out to me. Let's create something amazing together!
 
-[Contact Me](#) | [GitHub](https://github.com/yourusername) | [LinkedIn](https://www.linkedin.com/in/yourname)
+[Contact Me](#) | [GitHub](https://github.com/yourusername) | [LinkedIn](https://www.linkedin.com/in/yourname/mariko)
 
 
 
@@ -62,7 +61,7 @@ I'm always open to new opportunities, exciting projects, and collaborations. If 
 
 export default About;
 
-const SideBarContent = ({ title, content, onClick, isActive }) => {
+const SideBarContent = ({ title, content, onClick, isActive, active }) => {
 	// const [active, setActive] = useState(false);
 	const contentRef = useRef(null);
 	// const toggleAccordion = () => {
@@ -71,12 +70,13 @@ const SideBarContent = ({ title, content, onClick, isActive }) => {
 	// 		contentRef.current.style.maxHeight = active ? '0px' : `${contentRef.current.scrollHeight}px`;
 	// 	}
 	// };
+	console.log(active);
 
 	return (
 		<div className='w-full flex flex-col'>
-			<button onClick={onClick} className={`items-center  bg-borderColor/80 px-5  h-9 md:h-11 w-full  flex`}>
-				<div className={`${isActive ? 'text-textActive' : 'hover:text-textActive'} transition-colors box-center`}>
-					<p className={`transition-transform ${isActive ? 'rotate-90' : 'rotate-0'}`}>▶</p>
+			<button onClick={onClick} className={`items-center  bg-borderColor/80 px-5  h-10  w-full  flex`}>
+				<div className={`${isActive ? 'text-textActive' : 'hover:text-textActive'}  transition-colors box-center`}>
+					{isActive ? <FileIcon opened /> : <FileIcon />}
 					<p className='pl-3'>{title}</p>
 				</div>
 			</button>
@@ -85,35 +85,17 @@ const SideBarContent = ({ title, content, onClick, isActive }) => {
 				className={`overflow-hidden mb-[3px] bg-dark transition-all  ${isActive ? 'max-h-40' : 'max-h-0'}`}>
 				<div className='flex flex-col py-3 pl-5'>
 					<div className='flex gap-2 items-center'>
-						{/* <img src={File} alt='' /> */}
-						<img
-							alt='svgImg'
-							src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAsMCwyNTYsMjU2IgpzdHlsZT0iZmlsbDojMDAwMDAwOyI+CjxnIGZpbGw9IiM0M2Q5YWQiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxnIHRyYW5zZm9ybT0ic2NhbGUoNCw0KSI+PHBhdGggZD0iTTEwLDI3aDQ0djE4YzAsMy4zMDkgLTIuNjkxLDYgLTYsNmgtMzJjLTMuMzA5LDAgLTYsLTIuNjkxIC02LC02ek01NCwyNGgtNDR2LTVjMCwtMy4zMDkgMi42OTEsLTYgNiwtNmgzLjg5NmMxLjgxLDAgMy41ODUsMC42MjMgNC45OTgsMS43NTNsMS43MTMsMS4zN2MwLjcwNSwwLjU2NiAxLjU5MiwwLjg3NyAyLjQ5NywwLjg3N2gxOC44OTZjMy4zMDksMCA2LDIuNjkxIDYsNnoiPjwvcGF0aD48L2c+PC9nPgo8L3N2Zz4='
-						/>
-						<p className='italic'>high-school</p>
+						<p>{content}</p>
 					</div>
-					<div className='flex gap-2 items-center'>
-						<svg xmlns='http://www.w3.org/2000/svg' width='18' height='16' viewBox='0 0 16 14' fill='none'>
-							<path
-								d='M15.0802 4.30056V12.9672C15.0802 13.1588 15.0041 13.3425 14.8687 13.4779C14.7332 13.6134 14.5495 13.6895 14.358 13.6895H1.35796C1.16642 13.6895 0.982719 13.6134 0.847276 13.4779C0.711833 13.3425 0.635742 13.1588 0.635742 12.9672V3.57834H14.358C14.5495 3.57834 14.7332 3.65443 14.8687 3.78988C15.0041 3.92532 15.0802 4.10902 15.0802 4.30056ZM8.15696 2.1339H0.635742V1.41168C0.635742 1.22013 0.711833 1.03643 0.847276 0.900987C0.982719 0.765544 1.16642 0.689453 1.35796 0.689453H6.71252L8.15696 2.1339Z'
-								fill='#E99287'
-							/>
-						</svg>
-						<p>university</p>
-					</div>
-
-					<p>interests</p>
 				</div>
 			</div>
 		</div>
 	);
 };
 const Accordion = ({ items }) => {
-	const [activeIndex, setActiveIndex] = useState(null);
-
+	const [activeIndex, setActiveIndex] = useState(0);
 	const handleItemClick = (index) => {
 		if (index === activeIndex) {
-			// Clicking the same item again should close it.
 			setActiveIndex(null);
 		} else {
 			setActiveIndex(index);
@@ -132,5 +114,37 @@ const Accordion = ({ items }) => {
 				/>
 			))}
 		</div>
+	);
+};
+
+const FileIcon = ({ opened = false }) => {
+	return opened ? (
+		<svg
+			className='fill-primary stroke-primary h-[1.12rem] w-[1.12rem]'
+			viewBox='0 0 1920 1920'
+			xmlns='http://www.w3.org/2000/svg'>
+			<g id='SVGRepo_bgCarrier' strokeWidth='0'></g>
+			<g id='SVGRepo_tracerCarrier' strokeLinecap='round' strokeLinejoin='round'></g>
+			<g id='SVGRepo_iconCarrier'>
+				{' '}
+				<path
+					d='m494.165 640.333-278.4 890.774 101.867 31.786L572.459 747h1211.306l-183.36 917.12c-5.013 24.853-26.986 42.88-52.266 42.88H159.979c-29.334 0-53.334-23.893-53.334-53.333v-1440h454.507L732.779 427h760.533v106.667h106.667V320.333H783.872L612.139 107H-.021v1546.667c0 88.213 71.786 160 160 160h1388.16c75.946 0 141.973-54.08 156.906-128.64l208.96-1044.694H494.165Z'
+					fillRule='evenodd'></path>{' '}
+			</g>
+		</svg>
+	) : (
+		<svg
+			className='fill-primary stroke-primary h-[1.12rem] w-[1.12rem]'
+			viewBox='0 0 1920 1920'
+			xmlns='http://www.w3.org/2000/svg'>
+			<g id='SVGRepo_bgCarrier' strokeWidth='0'></g>
+			<g id='SVGRepo_tracerCarrier' strokeLinecap='round' strokeLinejoin='round'></g>
+			<g id='SVGRepo_iconCarrier'>
+				{' '}
+				<path
+					d='M1807.059 1637.706c0 31.172-25.412 56.47-56.47 56.47H169.411c-31.06 0-56.47-25.298-56.47-56.47V225.94h590.907L854.4 451.824H225.882v112.94H1807.06v1072.942ZM990.269 451.824 764.385 113H0v1524.706c0 93.402 76.01 169.412 169.412 169.412h1581.176c93.403 0 169.412-76.01 169.412-169.412V451.824H990.268Z'
+					fillRule='evenodd'></path>{' '}
+			</g>
+		</svg>
 	);
 };
