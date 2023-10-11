@@ -12,12 +12,12 @@ const About = () => {
 
 	return (
 		<>
-			<div className='flex justify-between flex-1 flex-col md:flex-row h-full w-full px-2 py-4'>
+			<div className='flex justify-between flex-1 flex-col md:flex-row h-full w-full px-2 pt-1 pb-4 md:pb-1'>
 				<div className='w-full border border-borderColor border-collapse md:w-1/3 lg:w-[25%] 2xl:w-[18%]  gap-1 md:gap-[3px] flex flex-col  md:px-0 sticky'>
 					<Accordion items={accordionItems} />
 				</div>
 				<div
-					className={`overflow-hidden border border-borderColor border-collapse flex flex-1 flex-col pt-4 md:pt-0  transition-opacity ${
+					className={`overflow-hidden border border-borderColor border-collapse flex flex-1 flex-col mt-2 md:mt-0 transition-opacity ${
 						isActive ? 'opacity-1' : 'opacity-0'
 					}`}>
 					<div className='h-11 flex text-textInactive'>
@@ -74,7 +74,7 @@ const SideBarContent = ({ title, content, onClick, isActive, active }) => {
 
 	return (
 		<div className='w-full flex flex-col'>
-			<button onClick={onClick} className={`items-center  bg-borderColor/80 px-5  h-10  w-full  flex`}>
+			<button onClick={onClick} className={`items-center  bg-borderColor/80 px-3  h-10  w-full  flex`}>
 				<div className={`${isActive ? 'text-textActive' : 'hover:text-textActive'}  transition-colors box-center`}>
 					{isActive ? <FileIcon opened /> : <FileIcon />}
 					<p className='pl-3'>{title}</p>
@@ -83,7 +83,7 @@ const SideBarContent = ({ title, content, onClick, isActive, active }) => {
 			<div
 				ref={contentRef}
 				className={`overflow-hidden mb-[3px] bg-dark transition-all  ${isActive ? 'max-h-40' : 'max-h-0'}`}>
-				<div className='flex flex-col py-3 pl-5'>
+				<div className='flex flex-col py-3 pl-3'>
 					<div className='flex gap-2 items-center'>
 						<p>{content}</p>
 					</div>
