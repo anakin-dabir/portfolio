@@ -3,11 +3,13 @@ import Highlighter from 'react-syntax-highlighter';
 import { atelierSulphurpoolDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 const SyntaxHighlighter = ({ children }) => {
-	const [height, setHeight] = useState(window.innerHeight * 0.67);
+	const [height, setHeight] = useState(
+		window.innerWidth >= 824 ? window.innerHeight - 260 : window.innerHeight * 0.67
+	);
 	useEffect(() => {
 		const updateHeight = () => {
 			if (window.innerWidth >= 824) {
-				const newHeight = window.innerHeight - 310;
+				const newHeight = window.innerHeight - 260;
 				setHeight(newHeight);
 			}
 		};
