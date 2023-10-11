@@ -3,23 +3,38 @@ import File from '../assets/mac.png';
 import SyntaxHighlighter from '../components/SyntaxHighlighter';
 import Test from '../Test';
 import CodeBox from '../components/CodeBox';
+import useActiveIndex from '../hooks/useActiveIndex';
+import useFileActive from '../hooks/useFileActive';
 
 const About = () => {
-	const [isActive, setActive] = useState(true);
+	const { handleFileClick, file, removeActiveFile } = useFileActive();
 	const accordionItems = [
-		{ title: 'Personal Info', content: 'info' },
-		{ title: 'Contacts', content: 'Content for Item 2' },
+		{
+			title: 'Personal Info',
+			content: [
+				{ fileName: 'Personal Info', fileContent: 'This is me the motherfucker' },
+				{ fileName: 'DOB', fileContent: '' },
+				{ fileName: 'DOB', fileContent: '' },
+			],
+		},
+		{
+			title: 'Contacts',
+			content: [
+				{ fileName: 'Personal Info', fileContent: 'Hui' },
+				{ fileName: 'DOB', fileContent: '' },
+			],
+		},
 	];
 
 	return (
 		<>
 			<div className='flex justify-between flex-1 flex-col md:flex-row h-full w-full px-2 pt-1 pb-4 md:px-0 md:pb-1'>
 				<div className='w-full border border-borderColor border-collapse md:w-1/3 lg:w-[25%] 2xl:w-[18%]  gap-1 md:gap-[3px] flex flex-col  md:px-0 sticky'>
-					<Accordion items={accordionItems} />
+					<Accordion items={accordionItems} handleFileClick={handleFileClick} file={file} />
 				</div>
 				<div className='border border-borderColor border-collapse flex flex-1 flex-col mt-2 md:mt-0 relative'>
-					<div className={`transition-opacity ${isActive ? 'opacity-1' : 'opacity-0'}`}>
-						<CodeBox setActive={setActive} />
+					<div className={`transition-opacity ${file.activeIndex != null ? 'opacity-1' : 'opacity-0'}`}>
+						{file.activeIndex != null && <CodeBox file={file} removeActiveFile={removeActiveFile} />}
 					</div>
 				</div>
 			</div>
@@ -29,86 +44,7 @@ const About = () => {
 
 export default About;
 
-const SideBarContent = ({ title, content, onClick, isActive, active }) => {
-	// const [active, setActive] = useState(false);
-	const contentRef = useRef(null);
-	// const toggleAccordion = () => {
-	// 	setActive(!active);
-	// 	if (contentRef.current) {
-	// 		contentRef.current.style.maxHeight = active ? '0px' : `${contentRef.current.scrollHeight}px`;
-	// 	}
-	// };
 
-	return (
-		<div className='w-full flex flex-col'>
-			<button onClick={onClick} className={`items-center  bg-borderColor/80 px-3  h-10  w-full  flex`}>
-				<div className={`${isActive ? 'text-textActive' : 'hover:text-textActive'}  transition-colors box-center`}>
-					{isActive ? <FileIcon opened /> : <FileIcon />}
-					<p className='pl-3'>{title}</p>
-				</div>
-			</button>
-			<div
-				ref={contentRef}
-				className={`overflow-hidden mb-[3px] bg-dark transition-all  ${isActive ? 'max-h-40' : 'max-h-0'}`}>
-				<div className='flex flex-col gap-4 py-3 pl-3'>
-					<div className='flex gap-2 items-center text-sm'>
-						<svg
-							width='24px'
-							height='24px'
-							viewBox='0 0 512 512'
-							version='1.1'
-							xmlns='http://www.w3.org/2000/svg'
-							xmlns:xlink='http://www.w3.org/1999/xlink'
-							fill='#607B96'>
-							<g id='SVGRepo_bgCarrier' stroke-width='0'></g>
-							<g id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'></g>
-							<g id='SVGRepo_iconCarrier'>
-								{' '}
-								<title>txt-document</title>{' '}
-								<g id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'>
-									{' '}
-									<g id='icon' fill='#607B96' transform='translate(64.000000, 42.666667)'>
-										{' '}
-										<path
-											d='M249.9584,7.10542736e-15 L15.2917333,7.10542736e-15 L15.2917333,234.666667 L57.9584,234.666667 L57.9584,192 L57.9584,169.6 L57.9584,42.6666667 L232.251733,42.6666667 L313.9584,124.373333 L313.9584,169.6 L313.9584,192 L313.9584,234.666667 L356.625067,234.666667 L356.625067,106.666667 L249.9584,7.10542736e-15 L249.9584,7.10542736e-15 Z M-1.42108547e-14,277.5744 L-1.42108547e-14,300.1664 L37.056,300.1664 L37.056,405.7024 L65.92,405.7024 L65.92,300.1664 L103.530667,300.1664 L103.530667,277.5744 L-1.42108547e-14,277.5744 Z M217.1712,277.5744 L186.9632,319.345067 L157.1392,277.5744 L123.581867,277.5744 L168.616533,339.9744 L121.2352,405.7024 L155.304533,405.7024 L185.533867,362.929067 L215.912533,405.7024 L250.7072,405.7024 L203.624533,340.699733 L250.173867,277.5744 L217.1712,277.5744 Z M269.2992,277.5744 L269.2992,300.1664 L306.376533,300.1664 L306.376533,405.7024 L335.240533,405.7024 L335.240533,300.1664 L372.829867,300.1664 L372.829867,277.5744 L269.2992,277.5744 Z'
-											id='TXT'>
-											{' '}
-										</path>{' '}
-									</g>{' '}
-								</g>{' '}
-							</g>
-						</svg>
-						<p>{content}</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	);
-};
-const Accordion = ({ items }) => {
-	const [activeIndex, setActiveIndex] = useState(0);
-	const handleItemClick = (index) => {
-		if (index === activeIndex) {
-			setActiveIndex(null);
-		} else {
-			setActiveIndex(index);
-		}
-	};
-
-	return (
-		<div className='accordion'>
-			{items.map((item, index) => (
-				<SideBarContent
-					key={index}
-					title={item.title}
-					content={item.content}
-					isActive={index === activeIndex}
-					onClick={() => handleItemClick(index)}
-				/>
-			))}
-		</div>
-	);
-};
 
 const FileIcon = ({ opened = false }) => {
 	return opened ? (

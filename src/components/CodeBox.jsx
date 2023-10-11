@@ -1,6 +1,6 @@
 import SyntaxHighlighter from './SyntaxHighlighter';
 
-const CodeBox = ({ name = 'personal-info', content = 'hui', setActive }) => {
+const CodeBox = ({ file, removeActiveFile }) => {
 	return (
 		<>
 			<div className='h-11 flex text-textInactive'>
@@ -11,14 +11,14 @@ const CodeBox = ({ name = 'personal-info', content = 'hui', setActive }) => {
 						viewBox='0 0 512 512'
 						version='1.1'
 						xmlns='http://www.w3.org/2000/svg'
-						xmlns:xlink='http://www.w3.org/1999/xlink'
+						xmlnsXlink='http://www.w3.org/1999/xlink'
 						fill='#607B96'>
-						<g id='SVGRepo_bgCarrier' stroke-width='0'></g>
-						<g id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'></g>
+						<g id='SVGRepo_bgCarrier' strokeWidth='0'></g>
+						<g id='SVGRepo_tracerCarrier' strokeLinecap='round' strokeLinejoin='round'></g>
 						<g id='SVGRepo_iconCarrier'>
 							{' '}
 							<title>txt-document</title>{' '}
-							<g id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'>
+							<g id='Page-1' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
 								{' '}
 								<g id='icon' fill='#607B96' transform='translate(64.000000, 42.666667)'>
 									{' '}
@@ -32,16 +32,14 @@ const CodeBox = ({ name = 'personal-info', content = 'hui', setActive }) => {
 						</g>
 					</svg>
 
-					<p>{name}</p>
-					<button
-						onClick={() => setActive((prev) => !prev)}
-						className='pl-3 pt-3 text-2xl hover:text-textActive opacity-0 transition-colors'>
+					<p>{file.fileName}</p>
+					<button onClick={removeActiveFile} className='pl-3 pt-3 text-2xl hover:text-textActive opacity-0 transition-colors'>
 						˟
 					</button>
 				</div>
 			</div>
 			<div className='bg-dark flex-1 px-3 py-5'>
-				<SyntaxHighlighter>{content}</SyntaxHighlighter>
+				<SyntaxHighlighter>{file.fileContent}</SyntaxHighlighter>
 			</div>
 		</>
 	);
