@@ -1,6 +1,7 @@
 import CodeBox from '../components/CodeBox';
 import useFileActive from '../hooks/useFileActive';
 import Accordion from '../components/Accordion';
+import { BgCodeBox } from '../components/Icons';
 
 const About = () => {
 	const { handleFileClick, file, removeActiveFile } = useFileActive();
@@ -29,9 +30,7 @@ const About = () => {
 					<Accordion items={accordionItems} handleFileClick={handleFileClick} file={file} />
 				</div>
 				<div className='border border-borderColor border-collapse flex flex-1 flex-col mt-2 md:mt-0 relative'>
-					<div className={`transition-opacity ${file.activeIndex != null ? 'opacity-1' : 'opacity-0'}`}>
-						{file.activeIndex != null && <CodeBox file={file} removeActiveFile={removeActiveFile} />}
-					</div>
+					{file.activeIndex == null ? <BgCodeBox /> : <CodeBox file={file} removeActiveFile={removeActiveFile} />}
 				</div>
 			</div>
 		</>

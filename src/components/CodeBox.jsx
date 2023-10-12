@@ -1,9 +1,10 @@
 import SyntaxHighlighter from './SyntaxHighlighter';
 import { TxtIcon } from '../components/Icons';
+import { BgCodeBox } from '../components/Icons';
 
 const CodeBox = ({ file, removeActiveFile }) => {
 	return (
-		<>
+		<div className={`transition-opacity ${file.activeIndex != null ? 'opacity-1' : 'opacity-0'}`}>
 			<div className='h-11 flex text-textInactive'>
 				<div className='px-4 flex gap-1 items-center bg-dark border-b border-borderColor [&>*]:hover:opacity-100'>
 					<TxtIcon />
@@ -16,7 +17,7 @@ const CodeBox = ({ file, removeActiveFile }) => {
 			<div className='bg-dark flex-1 px-3 py-5'>
 				<SyntaxHighlighter>{file.fileContent}</SyntaxHighlighter>
 			</div>
-		</>
+		</div>
 	);
 };
 
