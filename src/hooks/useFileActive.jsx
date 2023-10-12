@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 const useFileActive = () => {
 	const initialFile = {
@@ -9,7 +9,7 @@ const useFileActive = () => {
 	};
 	const [file, setActiveFile] = useState(initialFile);
 	const handleFileClick = (sectionIndex, activeIndex, fileName, fileContent) => {
-		if (activeIndex !== file.activeIndex && sectionIndex !== file.sectionIndex) {
+		if (activeIndex !== file.activeIndex || sectionIndex !== file.sectionIndex) {
 			setActiveFile({ sectionIndex, activeIndex, fileName, fileContent });
 		}
 	};
