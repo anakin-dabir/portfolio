@@ -1,9 +1,7 @@
-import React from 'react';
-
 const Loader = () => {
 	return (
 		<div className='fixed pt-14 md:pt-0 top-1/2 left-1/2 box-center flex-col -translate-x-1/2 -translate-y-1/2'>
-			<div className='running scale-[1.5]'>
+			<div className='running md:scale-[2] scale-150'>
 				<div className='outer'>
 					<div className='body'>
 						<div className='arm front'></div>
