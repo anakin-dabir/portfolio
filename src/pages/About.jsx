@@ -9,7 +9,122 @@ const About = () => {
 		{
 			title: 'Personal Info',
 			content: [
-				{ fileName: 'Personal Info', fileContent: 'This is me the motherfucker' },
+				{
+					fileName: 'Personal Info',
+					fileContent: `This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+					This is me the motherfucker
+				
+					`,
+				},
 				{ fileName: 'DOB', fileContent: '' },
 				{ fileName: 'DOB', fileContent: '' },
 			],

@@ -15,7 +15,6 @@ const useFileActive = () => {
 		activeIndex,
 		fileName,
 		fileContent,
-		fileIcon,
 		fileType
 	) => {
 		if (activeIndex !== file.activeIndex || sectionIndex !== file.sectionIndex) {
@@ -24,7 +23,6 @@ const useFileActive = () => {
 				activeIndex,
 				fileName,
 				fileContent,
-				fileIcon,
 				fileType,
 			});
 		}

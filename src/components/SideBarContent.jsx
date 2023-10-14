@@ -24,7 +24,7 @@ const SideBarContent = ({
 						return (
 							<button
 								key={i}
-								onClick={() => handleFileClick(index, i, content.fileName, content.fileContent)}
+								onClick={() => handleFileClick(index, i, content.fileName, content.fileContent, content.fileType)}
 								className={`flex gap-2 items-center text-sm ${
 									index === file.sectionIndex && file.activeIndex === i ? 'text-textActive' : 'text-textInactive'
 								}`}>

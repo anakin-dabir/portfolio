@@ -8,18 +8,7 @@ const Contact = () => {
 	const accordionItems = [
 		{
 			title: 'Personal Info',
-			content: [
-				{ fileName: 'Personal Info', fileContent: 'This is me the motherfucker' },
-				{ fileName: 'DOB', fileContent: '' },
-				{ fileName: 'DOB', fileContent: '' },
-			],
-		},
-		{
-			title: 'Contacts',
-			content: [
-				{ fileName: 'Personal Info', fileContent: 'Hui' },
-				{ fileName: 'DOB', fileContent: '' },
-			],
+			content: [{ fileName: 'Message->', fileContent: Form, fileType: 'Component' }],
 		},
 	];
 
@@ -42,3 +31,11 @@ const Contact = () => {
 };
 
 export default Contact;
+
+const Form = () => {
+	return (
+		<>
+			<div className={`h-full bg-pink-400`}></div>
+		</>
+	);
+};
