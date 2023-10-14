@@ -11,8 +11,10 @@ const SideBarContent = ({
 }) => {
 	return (
 		<div className='w-full flex flex-col'>
-			<button onClick={onClick} className={`items-center  bg-borderColor/80 px-3  h-10  w-full  flex`}>
-				<div className={`${isActive ? 'text-textActive' : 'hover:text-textActive'}  transition-colors box-center`}>
+			<button
+				onClick={onClick}
+				className={`items-center bg-borderColor/80 focus:bg-borderColor/80 px-3  h-10  w-full  flex`}>
+				<div className={`${isActive ? 'text-textActive' : 'hover:text-textActive'} transition-colors box-center`}>
 					{isActive ? <FileIcon opened /> : <FileIcon />}
 					<p className='pl-3'>{title}</p>
 				</div>

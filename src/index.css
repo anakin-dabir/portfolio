@@ -28,11 +28,14 @@
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-text-size-adjust: 100%;
 }
+input,
+textarea,
 input:focus,
 select:focus,
 textarea:focus,
 button:focus {
 	outline: none;
+	background-color: transparent;
 }
 
 select {

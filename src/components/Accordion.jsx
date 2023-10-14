@@ -1,8 +1,16 @@
-import useActiveIndex from '../hooks/useActiveIndex';
 import SideBarContent from './SideBarContent';
+import { useState } from 'react';
 
 const Accordion = ({ items, handleFileClick, file }) => {
-	const { activeIndex, handleItemClick } = useActiveIndex();
+	const [activeIndex, setActiveIndex] = useState(null);
+
+	const handleItemClick = (index) => {
+		if (index === activeIndex) {
+			setActiveIndex(null);
+		} else {
+			setActiveIndex(index);
+		}
+	};
 
 	return (
 		<div className='accordion'>

@@ -2,6 +2,8 @@ import CodeBox from '../components/CodeBox';
 import useFileActive from '../hooks/useFileActive';
 import Accordion from '../components/Accordion';
 import { BgCodeBox } from '../components/Icons';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 const Contact = () => {
 	const { handleFileClick, file, removeActiveFile } = useFileActive();
@@ -32,10 +34,52 @@ const Contact = () => {
 
 export default Contact;
 
-const Form = () => {
+const Form = ({ height }) => {
+	const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+	useEffect(() => {
+		console.log({ formData });
+	}, [formData]);
 	return (
 		<>
-			<div className={`h-full bg-pink-400`}></div>
+			<div
+				className={'flex justify-center w-full items-center flex-col text-textInactive caret-primary'}
+				style={{ height: height }}>
+				<div className='flex items-center w-full'>
+					<label htmlFor='name'>Name........</label>
+					<input
+						type='text'
+						name='name'
+						id='name'
+						placeholder='{Enter}'
+						value={formData.name}
+						className='w-28'
+						onChange={(e) => setFormData((prev) => ({ ...prev, name: e.target.value }))}
+					/>
+				</div>
+				<div className='flex items-center  w-full'>
+					<label htmlFor='email'>Email.......</label>
+					<input
+						type='email'
+						name='email'
+						id='email'
+						placeholder='{Enter}'
+						value={formData.email}
+						className='w-28'
+						onChange={(e) => setFormData((prev) => ({ ...prev, email: e.target.value }))}
+					/>
+				</div>
+				<div className='flex items-start  w-full'>
+					<label htmlFor='message'>Message.....</label>
+					<textarea
+						name='name'
+						id='name'
+						placeholder='{Enter}'
+						value={formData.message}
+						className='w-28 resize-none'
+						onChange={(e) => setFormData((prev) => ({ ...prev, message: e.target.value }))}
+					/>
+				</div>
+			</div>
 		</>
 	);
 };

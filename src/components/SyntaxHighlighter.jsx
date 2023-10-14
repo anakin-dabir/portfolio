@@ -1,6 +1,6 @@
 import Highlighter from 'react-syntax-highlighter';
 
-const SyntaxHighlighter = ({ children }) => {
+const SyntaxHighlighter = ({ children, height }) => {
 	return (
 		<Highlighter
 			language='text'
@@ -11,7 +11,7 @@ const SyntaxHighlighter = ({ children }) => {
 			className='bg-transparent !overflow-x-hidden [&>*]:text-textInactive [&>*]:font-sans [&>code]:break-words [&>code]:hyphens-auto'
 			customStyle={{
 				backgroundColor: 'transparent',
-				height: '100%',
+				height: height,
 				padding: 0,
 				// overflowX: 'hidden',
 				// overflowY: 'auto',

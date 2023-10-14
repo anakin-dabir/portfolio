@@ -4,7 +4,7 @@ import { BgCodeBox } from '../components/Icons';
 import useHeightCalculator from '../hooks/useHeightCalculator';
 
 const CodeBox = ({ file, removeActiveFile }) => {
-	const height = useHeightCalculator();
+	const { height } = useHeightCalculator();
 	const { fileContent: Component, fileType, fileName } = file;
 	return (
 		<div className={`transition-opacity ${file.activeIndex != null ? 'opacity-1' : 'opacity-0'}`}>
@@ -17,8 +17,12 @@ const CodeBox = ({ file, removeActiveFile }) => {
 					</button>
 				</div>
 			</div>
-			<div className='bg-dark flex-1 px-3 py-5' style={{ height: height }}>
-				{fileType === 'Component' ? <Component /> : <SyntaxHighlighter>{Component}</SyntaxHighlighter>}
+			<div className='bg-dark flex-1 px-3 py-5'>
+				{fileType === 'Component' ? (
+					<Component height={height} />
+				) : (
+					<SyntaxHighlighter height={height}>{Component}</SyntaxHighlighter>
+				)}
 			</div>
 		</div>
 	);

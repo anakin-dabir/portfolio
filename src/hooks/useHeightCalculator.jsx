@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 const useHeightCalculator = () => {
 	const [height, setHeight] = useState(
-		window.innerWidth >= 824 ? window.innerHeight - 210 : window.innerHeight - 320
+		window.innerWidth >= 824 ? window.innerHeight - 260 : window.innerHeight - 320
 	);
 	useEffect(() => {
 		const updateHeight = () => {
@@ -18,7 +18,7 @@ const useHeightCalculator = () => {
 		};
 	}, []);
 
-	return height;
+	return { height };
 };
 
 export default useHeightCalculator;
