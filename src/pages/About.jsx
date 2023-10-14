@@ -30,7 +30,7 @@ const About = () => {
 					<Accordion items={accordionItems} handleFileClick={handleFileClick} file={file} />
 				</div>
 				<div className='border border-borderColor border-collapse flex flex-1 flex-col mt-2 md:mt-0 relative'>
-					{file.activeIndex == null ? <BgCodeBox /> : <CodeBox file={file} removeActiveFile={removeActiveFile} />}
+					{file.activeIndex == null ? <BgCodeBox variant='About' /> : <CodeBox file={file} removeActiveFile={removeActiveFile} />}
 				</div>
 			</div>
 		</>
