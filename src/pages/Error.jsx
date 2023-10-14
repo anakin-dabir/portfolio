@@ -8,9 +8,8 @@ const Error = () => {
 			<Lottie animationData={Sleeping} />
 			<Link to='/'>
 				<div className='flex items-center gap-4'>
-					{'--->'}
 					<svg
-						className='h-14 w-10 fill-textActive'
+						className='h-12 w-12 fill-textInactive'
 						version='1.1'
 						id='Capa_1'
 						xmlns='http://www.w3.org/2000/svg'

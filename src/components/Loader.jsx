@@ -11,7 +11,7 @@ const Loader = () => {
 					</div>
 				</div>
 			</div>
-			<p className='pt-10 text-primary text-lg md:text-xl font-medium'>
+			<p className='pt-10 text-textInactive text-lg md:text-xl font-medium'>
 				Loading
 				<span className='animate-ping'>.</span>
 				<span className='animate-pulse'>.</span>
