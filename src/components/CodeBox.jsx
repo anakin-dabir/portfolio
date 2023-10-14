@@ -1,6 +1,5 @@
 import SyntaxHighlighter from './SyntaxHighlighter';
 import { TxtIcon } from '../components/Icons';
-import { BgCodeBox } from '../components/Icons';
 import useHeightCalculator from '../hooks/useHeightCalculator';
 
 const CodeBox = ({ file, removeActiveFile }) => {
