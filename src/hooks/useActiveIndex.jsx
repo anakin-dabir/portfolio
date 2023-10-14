@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const useActiveIndex = (initialIndex = 0) => {
+const useActiveIndex = (initialIndex = null) => {
 	const [activeIndex, setActiveIndex] = useState(initialIndex);
 
 	const handleItemClick = (index) => {
