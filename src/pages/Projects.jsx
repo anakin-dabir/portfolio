@@ -8,7 +8,7 @@ const Projects = () => {
 	const accordionItems = [
 		{
 			title: 'Personal Info',
-			content: [{ fileName: 'Personal Info', fileType: 'Component' }],
+			content: [{ fileName: 'Personal Info' }],
 		},
 	];
 
