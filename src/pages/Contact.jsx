@@ -41,19 +41,41 @@ export default Contact;
 
 const Form = ({ height }) => {
 	const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-	const validateForm = () => {
-	
-	}
+	const [loading, setLoading] = useState(false);
+	const [error, setError] = useState({ name: true, email: true, message: true });
+	const validateForm = (e) => {
+		e.preventDefault();
+	};
+	const handleChange = (e) => {
+		const emailTest = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$/;
+		const { name, value } = e.target;
+		if (name === 'name') {
+			if (value !== '') setError((pre) => ({ ...pre, name: false }));
+			else setError((pre) => ({ ...pre, name: true }));
+		} else if (name === 'email') {
+			if (emailTest.test(value)) setError((pre) => ({ ...pre, email: false }));
+			else setError((pre) => ({ ...pre, email: true }));
+		} else {
+			if (value !== '') setError((pre) => ({ ...pre, message: false }));
+			else setError((pre) => ({ ...pre, message: true }));
+		}
+
+		setFormData((prev) => ({ ...prev, [name]: value }));
+	};
+
 	useEffect(() => {
-		console.log({ formData });
-	}, [formData]);
+		console.log({ error });
+	}, [error]);
 
 	return (
 		<>
 			<div
 				className={'box-center w-full flex-col text-textInactive caret-primary'}
 				style={{ height: height }}>
-				<div className='border-2  border-dashed pl-4 border-borderColor box-center flex-col gap-6 p-4 relative'>
+				<form
+					autoComplete='none'
+					onSubmit={validateForm}
+					className='border-2  border-dashed pl-4 border-borderColor box-center flex-col gap-6 p-4 relative'>
 					<div className='flex items-center gap-3'>
 						<label htmlFor='name'>
 							<NameIcon />
@@ -65,7 +87,7 @@ const Form = ({ height }) => {
 							placeholder='{Enter Name}'
 							value={formData.name}
 							className='w-full  rounded-md '
-							onChange={(e) => setFormData((prev) => ({ ...prev, name: e.target.value }))}
+							onChange={handleChange}
 						/>
 					</div>
 					<div className='flex items-center gap-3'>
@@ -79,7 +101,7 @@ const Form = ({ height }) => {
 							placeholder='{Enter Email}'
 							value={formData.email}
 							className='w-full  rounded-md '
-							onChange={(e) => setFormData((prev) => ({ ...prev, email: e.target.value }))}
+							onChange={handleChange}
 						/>
 					</div>
 					<div className='flex items-start gap-3 w-full'>
@@ -92,14 +114,18 @@ const Form = ({ height }) => {
 							placeholder='{Enter Message}'
 							value={formData.message}
 							className='w-full rounded-md resize-none h-20'
-							onChange={(e) => setFormData((prev) => ({ ...prev, message: e.target.value }))}
+							onChange={handleChange}
 						/>
 					</div>
 
-					<button className='box-center border border-dashed border-borderColor rounded-full p-3 w-32 self-start hover:bg-borderColor hover:text-textActive transition-colors active:scale-95'>
+					<button
+						type='submit'
+						className={`${
+							error.message || error.name || error.message ? 'hidden' : 'flex'
+						} items-center justify-center border border-dashed border-borderColor rounded-full p-3 w-32 self-start hover:bg-borderColor hover:text-dark focus:bg-borderColor transition-colors active:scale-95`}>
 						Send
 					</button>
-				</div>
+				</form>
 			</div>
 		</>
 	);
