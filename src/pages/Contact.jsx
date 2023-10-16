@@ -41,10 +41,11 @@ export default Contact;
 
 const Form = ({ height }) => {
 	const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-	const [loading, setLoading] = useState(false);
+	const [open, setOpen] = useState(false);
 	const [error, setError] = useState({ name: true, email: true, message: true });
-	const validateForm = (e) => {
+	const submitForm = (e) => {
 		e.preventDefault();
+		setOpen(true);
 	};
 	const handleChange = (e) => {
 		const emailTest = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$/;
@@ -73,10 +74,10 @@ const Form = ({ height }) => {
 				className={'box-center w-full flex-col text-textInactive caret-primary'}
 				style={{ height: height }}>
 				<form
-					autoComplete='none'
-					onSubmit={validateForm}
-					className='border-2  border-dashed pl-4 border-borderColor box-center flex-col gap-6 p-4 relative'>
-					<div className='flex items-center gap-3'>
+					autoComplete='off'
+					onSubmit={submitForm}
+					className='border-2 form rounded-xl overflow-hidden  border-dashed pl-4 border-borderColor box-center flex-col gap-6 p-4 pt-24 md:w-96 relative'>
+					<div className='flex items-center gap-3  w-full'>
 						<label htmlFor='name'>
 							<NameIcon />
 						</label>
@@ -90,7 +91,7 @@ const Form = ({ height }) => {
 							onChange={handleChange}
 						/>
 					</div>
-					<div className='flex items-center gap-3'>
+					<div className='flex items-center gap-3  w-full'>
 						<label htmlFor='email'>
 							<EmailIcon />
 						</label>
@@ -121,12 +122,35 @@ const Form = ({ height }) => {
 					<button
 						type='submit'
 						className={`${
-							error.message || error.name || error.message ? 'hidden' : 'flex'
-						} items-center justify-center border border-dashed border-borderColor rounded-full p-3 w-32 self-start hover:bg-borderColor hover:text-dark focus:bg-borderColor transition-colors active:scale-95`}>
+							error.message || error.name || error.message ? 'invisible' : 'visible'
+						} box-center border border-dashed border-borderColor rounded-full p-3 w-32 self-start hover:bg-borderColor hover:text-dark focus:bg-borderColor transition-colors active:scale-95`}>
 						Send
 					</button>
 				</form>
 			</div>
+			<BottomBar open={open} setOpen={setOpen} formData={formData} />
+		</>
+	);
+};
+
+const BottomBar = ({ open, setOpen, formData, setFormData, setError }) => {
+
+	useEffect(() => {
+
+	}, [])
+	return (
+		<>
+			<div
+				className={`z-[60] bg-borderColor/80 backdrop-blur-md transition-transform fixed left-0 bottom-0 w-full container mx-auto max-w-screen-2xl h-96 overflow-y-auto ${
+					open ? '-translate-y-0' : 'translate-y-full'
+				}`}>
+				<div className='text-borderActive'>{JSON.stringify(formData)}</div>
+			</div>
+			{open && (
+				<div class='fixed inset-0 z-50' onClick={() => setOpen((pre) => !pre)}>
+					<div class='fixed inset-0 bg-black opacity-30'></div>
+				</div>
+			)}
 		</>
 	);
 };
