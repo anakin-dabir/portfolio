@@ -1,5 +1,8 @@
 import { NameIcon } from '../../components/Icons';
 
+const Comp = () => {
+	return `this`;
+};
 const data = [
 	{
 		title: 'Personal Info',
@@ -16,6 +19,7 @@ const data = [
 		content: [
 			{ fileName: 'Personal Info', fileContent: 'Hui' },
 			{ fileName: 'DOB', fileContent: '' },
+			{ fileName: 'Comp', fileContent: Comp, fileType: 'Component' },
 		],
 	},
 ];
