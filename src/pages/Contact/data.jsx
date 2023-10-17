@@ -7,14 +7,14 @@ import JSONComponent from '../../components/JSONComponent';
 const Email = () => {
 	return (
 		<CopyComponent>
-			<JSONComponent content={[{ email: 'anakindabir@gmail.com' }]} />
+			<JSONComponent content={[{ email: 'anakindabir@gmail.com', copy: true }]} />
 		</CopyComponent>
 	);
 };
 const Phone = () => {
 	return (
 		<CopyComponent>
-			<JSONComponent content={[{ phone: '(+92) 3094998057' }]} />
+			<JSONComponent content={[{ phone: '(+92) 3094998057', copy: true }]} />
 		</CopyComponent>
 	);
 };
@@ -22,7 +22,7 @@ const Location = () => {
 	return (
 		<>
 			<CopyComponent>
-				<JSONComponent content={[{ location: 'Earth' }]} />
+				<JSONComponent content={[{ location: 'Earth', copy: true }]} />
 			</CopyComponent>
 			<div className='box-center'>
 				<EarthIcon />

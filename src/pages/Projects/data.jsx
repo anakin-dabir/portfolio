@@ -1,4 +1,5 @@
 import React from 'react';
+import JSONComponent from '../../components/JSONComponent';
 import Loader from '../../components/Loader';
 const Skills = React.lazy(() => import('./Skills'));
 
@@ -14,6 +15,25 @@ const SkillsData = ({ height }) => {
 	);
 };
 
+const Certificates = () => {
+	return (
+		<>
+			<JSONComponent
+				content={[
+					{ name: 'Advanced React' },
+					{ by: 'Meta' },
+					{ completed: 'April 08, 2023' },
+					{
+						verify: 'https://coursera.org/verify/HC3MN6MF9UXN',
+						link: true,
+						to: 'https://coursera.org/verify/HC3MN6MF9UXN',
+					},
+				]}
+			/>
+		</>
+	);
+};
+
 const data = [
 	{
 		title: 'Skills',
@@ -21,6 +41,15 @@ const data = [
 			{
 				fileName: 'skills',
 				fileContent: SkillsData,
+			},
+		],
+	},
+	{
+		title: 'Certifications',
+		content: [
+			{
+				fileName: 'Advanced React',
+				fileContent: Certificates,
 			},
 		],
 	},
