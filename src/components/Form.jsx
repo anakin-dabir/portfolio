@@ -1,8 +1,8 @@
-import { NameIcon, EmailIcon, MessageIcon } from './Icons';
+import { NameIcon, EmailIcon, MessageIcon } from '../pages/Contact/icons/Icons';
 import BottomBar from './BottomBar';
 import { useState } from 'react';
 
-const Form = ({ height }) => {
+const Form = () => {
 	const [formData, setFormData] = useState({ name: '', email: '', message: '' });
 	const [open, setOpen] = useState(false);
 	const [error, setError] = useState({ name: true, email: true, message: true });
@@ -28,9 +28,7 @@ const Form = ({ height }) => {
 	};
 	return (
 		<>
-			<div
-				className={'box-center w-full flex-col text-textInactive caret-primary'}
-				style={{ height: height }}>
+			<div className={'box-center w-full flex-col text-textInactive caret-primary h-full'}>
 				<form
 					autoComplete='off'
 					onSubmit={submitForm}

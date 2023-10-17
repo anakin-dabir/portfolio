@@ -24,15 +24,6 @@ const data = [
 			},
 		],
 	},
-	{
-		title: 'Projects',
-		content: [{ fileName: 'Full Stack' }, { fileName: 'Front End' }, { fileName: 'html/css' }],
-	},
-
-	{
-		title: 'Certifications',
-		content: [{ fileName: '' }],
-	},
 ];
 
 export default data;

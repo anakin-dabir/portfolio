@@ -1,9 +1,7 @@
 import SyntaxHighlighter from './SyntaxHighlighter';
 import { TxtIcon } from '../components/Icons';
-import useHeightCalculator from '../hooks/useHeightCalculator';
 
 const CodeBox = ({ file, removeActiveFile }) => {
-	const { height } = useHeightCalculator();
 	const { fileContent: Component, fileName, icon: Icon } = file;
 	return (
 		<div className={`transition-opacity ${file.activeIndex != null ? 'opacity-1' : 'opacity-0'}`}>
@@ -16,11 +14,9 @@ const CodeBox = ({ file, removeActiveFile }) => {
 					</button>
 				</div>
 			</div>
-			<div className='bg-dark flex-1 px-3 xl:px-10 py-5 box-center'>
-				<SyntaxHighlighter>
-					<Component height={height} />
-				</SyntaxHighlighter>
-			</div>
+			<SyntaxHighlighter>
+				<Component />
+			</SyntaxHighlighter>
 		</div>
 	);
 };

@@ -12,7 +12,7 @@ import { CIcon, RechartIcon } from './icons/IconPack5';
 
 const Skills = () => {
 	return (
-		<div className='box-center xl:content-center flex-wrap p-4 h-full gap-5'>
+		<div className='box-center flex-wrap p-4 h-full gap-5'>
 			<SvgLink to='https://react.dev/' name='React'>
 				<ReactIcon />
 			</SvgLink>
@@ -74,7 +74,7 @@ const SvgLink = ({ to, name, children }) => {
 	return (
 		<>
 			<a href={to} className='box-center group relative' target='_blank' rel='noopener noreferrer'>
-				<div className='bg-black border border-borderColor h-5 opacity-0 box-center transition-opacity text-textInactive absolute top-0 right-0 group-hover:opacity-100'>
+				<div className='bg-black border border-borderColor h-5 opacity-0 box-center transition-opacity text-textActive absolute top-0 right-0 group-hover:opacity-100'>
 					{name}
 				</div>
 				{children}

@@ -5,7 +5,7 @@ const useFileActive = () => {
 		sectionIndex: null,
 		activeIndex: null,
 		fileName: '',
-		fileContent: '',
+		fileContent: null,
 		icon: null,
 	};
 	const [file, setActiveFile] = useState(initialFile);

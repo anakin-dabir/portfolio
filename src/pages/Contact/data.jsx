@@ -1,10 +1,36 @@
-import {
-	PhoneIcon,
-	AtRateIcon,
-	LocationIcon,
-	EarthIcon,
-} from '../../components/Icons';
+import { PhoneIcon, AtRateIcon, LocationIcon, EarthIcon } from './icons/Icons';
+import { CopyIcon } from '../../components/Icons';
 import Form from '../../components/Form';
+import CopyComponent from '../../components/CopyComponent';
+
+const Email = () => {
+	return (
+		<CopyComponent>
+			<p>{'{'}</p>
+			<p className='text-primary'>
+				email: <span className='text-secondary'>anakindabir@gmail.com</span>
+			</p>
+			<p>{'}'}</p>
+		</CopyComponent>
+	);
+};
+const Phone = () => {
+	return (
+		<CopyComponent>
+			<p>+92-3094998057</p>
+		</CopyComponent>
+	);
+};
+const Location = () => {
+	return (
+		<CopyComponent>
+			<div className='flex'>
+				<p>Earth</p>
+				<EarthIcon />
+			</div>
+		</CopyComponent>
+	);
+};
 
 const data = [
 	{
@@ -14,13 +40,9 @@ const data = [
 	{
 		title: 'Contacts',
 		content: [
-			{ fileName: 'email', fileContent: `anakindabir@gmail.com`, icon: AtRateIcon },
-			{ fileName: 'phone', fileContent: `+92-3094998057`, icon: PhoneIcon },
-			{
-				fileName: 'location',
-				fileContent: `Earth`,
-				icon: LocationIcon,
-			},
+			{ fileName: 'email', fileContent: Email, icon: AtRateIcon },
+			{ fileName: 'phone', fileContent: Phone, icon: PhoneIcon },
+			{ fileName: 'location', fileContent: Location, icon: LocationIcon },
 		],
 	},
 ];
