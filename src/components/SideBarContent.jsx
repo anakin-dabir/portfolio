@@ -23,14 +23,15 @@ const SideBarContent = ({
 				className={`overflow-hidden mb-[3px] bg-dark transition-all  ${isActive ? 'max-h-40' : 'max-h-0'}`}>
 				<div className='flex flex-col gap-4 py-3 pl-3'>
 					{content.map((content, i) => {
+						const { icon: Icon } = content;
 						return (
 							<button
 								key={i}
-								onClick={() => handleFileClick(index, i, content.fileName, content.fileContent, content.fileType)}
+								onClick={() => handleFileClick(index, i, content.fileName, content.fileContent, content.fileType, Icon ? <Icon /> : null)}
 								className={`flex gap-2 items-center text-sm ${
 									index === file.sectionIndex && file.activeIndex === i ? 'text-textActive' : 'text-textInactive'
 								}`}>
-								<TxtIcon />
+								{!Icon ? <TxtIcon /> : <Icon />}
 								<p>{content.fileName}</p>
 							</button>
 						);

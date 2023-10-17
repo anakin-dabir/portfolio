@@ -15,6 +15,7 @@ const BottomBar = ({ open, setOpen, formData, setFormData, setError }) => {
 		return timeString;
 	};
 	useEffect(() => {
+		let firstInterval, secondInterval;
 		setdata(
 			<div className='flex md:gap-8 flex-col md:flex-row'>
 				<div>{updateTime()}</div>
@@ -22,7 +23,7 @@ const BottomBar = ({ open, setOpen, formData, setFormData, setError }) => {
 			</div>
 		);
 		if (open) {
-			setTimeout(() => {
+			firstInterval = setTimeout(() => {
 				setdata((pre) => (
 					<>
 						{pre}
@@ -49,7 +50,7 @@ const BottomBar = ({ open, setOpen, formData, setFormData, setError }) => {
 				));
 			}, 2000);
 
-			setTimeout(() => {
+			secondInterval = setTimeout(() => {
 				setdata((pre) => (
 					<>
 						{pre}
@@ -63,6 +64,10 @@ const BottomBar = ({ open, setOpen, formData, setFormData, setError }) => {
 				setError({ name: true, email: true, message: true });
 			}, 3000);
 		}
+		return () => {
+			clearInterval(firstInterval);
+			clearInterval(secondInterval);
+		};
 	}, [open]);
 
 	return (

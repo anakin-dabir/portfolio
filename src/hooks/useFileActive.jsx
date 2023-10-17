@@ -8,6 +8,7 @@ const useFileActive = () => {
 		fileContent: '',
 		fileIcon: null,
 		fileType: 'Text',
+		icon: null,
 	};
 	const [file, setActiveFile] = useState(initialFile);
 	const handleFileClick = (
@@ -15,7 +16,8 @@ const useFileActive = () => {
 		activeIndex,
 		fileName,
 		fileContent,
-		fileType
+		fileType,
+		icon
 	) => {
 		if (activeIndex !== file.activeIndex || sectionIndex !== file.sectionIndex) {
 			setActiveFile({
@@ -24,6 +26,7 @@ const useFileActive = () => {
 				fileName,
 				fileContent,
 				fileType,
+				icon,
 			});
 		}
 	};

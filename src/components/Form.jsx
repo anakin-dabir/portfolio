@@ -18,16 +18,14 @@ const Form = ({ height }) => {
 			if (value !== '' && !stringFilter.test(value)) setError((pre) => ({ ...pre, name: false }));
 			else setError((pre) => ({ ...pre, name: true }));
 		} else if (name === 'email') {
-			if (emailRegex.test(value)) setError((pre) => ({ ...pre, email: false }));
+			if (emailRegex.test(value) && !stringFilter.test(value)) setError((pre) => ({ ...pre, email: false }));
 			else setError((pre) => ({ ...pre, email: true }));
 		} else {
 			if (value !== '' && !stringFilter.test(value)) setError((pre) => ({ ...pre, message: false }));
 			else setError((pre) => ({ ...pre, message: true }));
 		}
-
 		setFormData((prev) => ({ ...prev, [name]: value }));
 	};
-
 	return (
 		<>
 			<div
@@ -37,6 +35,7 @@ const Form = ({ height }) => {
 					autoComplete='off'
 					onSubmit={submitForm}
 					className='border-2 bg-borderColor/20 form rounded-xl overflow-hidden  border-solid pl-4 border-borderColor box-center flex-col gap-6 sm:w-96 p-4 pt-24 md:w-[600px] md:px-10 relative'>
+					<div className='w-full h-2 border-b border-b-borderColor absolute bottom-[80px]'></div>
 					<div className='flex items-center gap-3  w-full'>
 						<label htmlFor='name'>
 							<NameIcon />
@@ -74,7 +73,7 @@ const Form = ({ height }) => {
 							id='message'
 							placeholder='{Enter Message}'
 							value={formData.message}
-							className='w-full rounded-md resize-none h-14'
+							className='w-full rounded-md resize-none h-20'
 							onChange={handleChange}
 						/>
 					</div>
@@ -83,7 +82,7 @@ const Form = ({ height }) => {
 						type='submit'
 						className={`${
 							error.message || error.name || error.email ? 'invisible' : 'visible'
-						} box-center border border-dashed border-borderColor rounded-full p-3 w-32 self-start hover:bg-borderColor hover:text-textActive focus:bg-borderColor transition-colors active:scale-95`}>
+						} box-center border border-dashed border-borderColor -mb-2 rounded-full p-3 w-32 self-start hover:bg-borderColor hover:text-textActive focus:bg-borderColor transition-colors active:scale-95`}>
 						Send
 					</button>
 				</form>

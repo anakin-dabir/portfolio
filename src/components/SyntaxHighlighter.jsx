@@ -13,14 +13,7 @@ const SyntaxHighlighter = ({ children, height }) => {
 				backgroundColor: 'transparent',
 				height: height,
 				padding: 0,
-				// overflowX: 'hidden',
-				// overflowY: 'auto',
-				// width: '100%',
-				// height: '100%',
-				// flex: 1,
-			}}
-			// style={atelierSulphurpoolDark}
-		>
+			}}>
 			{children}
 		</Highlighter>
 	);
