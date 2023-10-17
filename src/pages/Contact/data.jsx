@@ -6,15 +6,6 @@ import {
 } from '../../components/Icons';
 import Form from '../../components/Form';
 
-const Earth = () => {
-	return (
-		<div>
-			Planet Earth
-			<EarthIcon />
-		</div>
-	);
-};
-
 const data = [
 	{
 		title: 'Message me',
@@ -27,9 +18,8 @@ const data = [
 			{ fileName: 'phone', fileContent: `+92-3094998057`, icon: PhoneIcon },
 			{
 				fileName: 'location',
-				fileContent: Earth,
+				fileContent: `Earth`,
 				icon: LocationIcon,
-				fileType: 'Component',
 			},
 		],
 	},
