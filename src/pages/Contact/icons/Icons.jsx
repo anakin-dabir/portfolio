@@ -123,7 +123,11 @@ export const LocationIcon = () => {
 
 export const EarthIcon = () => {
 	return (
-		<svg viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg' fill='#000000'>
+		<svg
+			viewBox='0 0 64 64'
+			className='h-60 w-60'
+			xmlns='http://www.w3.org/2000/svg'
+			fill='#000000'>
 			<g id='SVGRepo_bgCarrier' strokeWidth='0'></g>
 			<g id='SVGRepo_tracerCarrier' strokeLinecap='round' strokeLinejoin='round'></g>
 			<g id='SVGRepo_iconCarrier'>
@@ -180,6 +184,28 @@ export const EarthIcon = () => {
 					<path d='m25.24 30c0-.12.59-.38.78-.19a12 12 0 0 1 1.37 2.72c-.09.18 0 .47-.25.28a17.6 17.6 0 0 1 -1.9-2.81z'></path>{' '}
 					<path d='m30.74 29.71c.08-.11 1-1 1.28-1s1 0 .91.22-1.41 1.91-1.66 1.75a1.66 1.66 0 0 1 -.53-.97z'></path>{' '}
 				</g>{' '}
+			</g>
+		</svg>
+	);
+};
+
+export const FormIcon = () => {
+	return (
+		<svg
+			viewBox='0 0 24 24'
+			height='24px'
+			width='24px'
+			fill='none'
+			xmlns='http://www.w3.org/2000/svg'>
+			<g id='SVGRepo_bgCarrier' strokeWidth='0'></g>
+			<g id='SVGRepo_tracerCarrier' strokeLinecap='round' strokeLinejoin='round'></g>
+			<g id='SVGRepo_iconCarrier'>
+				{' '}
+				<path
+					d='M14 16.5974L21.0072 13.4725C22.3309 12.8822 22.3309 11.1178 21.0072 10.5275L4.49746 3.16496C3.00163 2.49789 1.45007 3.97914 2.19099 5.36689L5.34302 11.2706C5.58818 11.7298 5.58817 12.2702 5.34302 12.7294L2.19099 18.6331C1.45006 20.0209 3.00163 21.5021 4.49746 20.835L9.24873 18.7162'
+					stroke='#607B96'
+					strokeWidth='1.5'
+					strokeLinecap='round'></path>{' '}
 			</g>
 		</svg>
 	);

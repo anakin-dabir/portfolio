@@ -1,50 +1,20 @@
-import { NameIcon } from '../../components/Icons';
+import JSONComponent from '../../components/JSONComponent';
 
-const NewComp = ({ height }) => {
+const PersonalInfo = () => {
+	return 'This';
+};
+const College = () => {
 	return (
-		<div className='text-textInactive overflow-y-auto w-full' style={{ height: height }}>
-			<div className='flex flex-col'>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-				<div>Punjab College ---- 2019-2021</div>
-			</div>
-		</div>
+		<JSONComponent
+			content={[{ college: 'Punjab College' }, { duration: '(2019-2021)' }, { grade: 'A+' }]}
+		/>
+	);
+};
+const University = () => {
+	return (
+		<JSONComponent
+			content={[{ university: 'University of the Punjab' }, { duration: '(2021-2025)' }, { grade: 'A+' }]}
+		/>
 	);
 };
 const data = [
@@ -53,7 +23,7 @@ const data = [
 		content: [
 			{
 				fileName: 'info',
-				fileContent: null,
+				fileContent: PersonalInfo,
 			},
 		],
 	},
@@ -62,15 +32,15 @@ const data = [
 		content: [
 			{
 				fileName: 'college',
-				fileContent: null,
+				fileContent: College,
 			},
-			{ fileName: 'university', fileContent: NewComp },
+			{ fileName: 'university', fileContent: University },
 		],
 	},
-	{
-		title: 'Experience',
-		content: [{ fileName: 'internship', fileContent: 'DevFum ---- 2023' }],
-	},
+	// {
+	// 	title: 'Experience',
+	// 	content: [{ fileName: 'internship', fileContent: 'DevFum ---- 2023' }],
+	// },
 ];
 
 export default data;

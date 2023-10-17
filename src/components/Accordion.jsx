@@ -2,7 +2,7 @@ import SideBarContent from './SideBarContent';
 import { useState } from 'react';
 
 const Accordion = ({ items, handleFileClick, file }) => {
-	const [activeIndex, setActiveIndex] = useState(0);
+	const [activeIndex, setActiveIndex] = useState(null);
 
 	const handleItemClick = (index) => {
 		if (index === activeIndex) {

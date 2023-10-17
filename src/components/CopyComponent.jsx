@@ -4,7 +4,9 @@ const CopyComponent = ({ children }) => {
 	const [copied, setCopied] = useState(false);
 	const ref = useRef(null);
 	const handleCopy = () => {
-		const textToCopy = ref.current.textContent;
+		const textToCopy = Array.from(ref.current.querySelectorAll('.cpy'))
+			.map((cpyElement) => cpyElement.textContent)
+			.join(' ');
 		navigator.clipboard.writeText(textToCopy);
 		setCopied((pre) => !pre);
 	};

@@ -1,48 +1,47 @@
 import { PhoneIcon, AtRateIcon, LocationIcon, EarthIcon } from './icons/Icons';
-import { CopyIcon } from '../../components/Icons';
 import Form from '../../components/Form';
 import CopyComponent from '../../components/CopyComponent';
+import { FormIcon } from './icons/Icons';
+import JSONComponent from '../../components/JSONComponent';
 
 const Email = () => {
 	return (
 		<CopyComponent>
-			<p>{'{'}</p>
-			<p className='text-primary'>
-				email: <span className='text-secondary'>anakindabir@gmail.com</span>
-			</p>
-			<p>{'}'}</p>
+			<JSONComponent content={[{ email: 'anakindabir@gmail.com' }]} />
 		</CopyComponent>
 	);
 };
 const Phone = () => {
 	return (
 		<CopyComponent>
-			<p>+92-3094998057</p>
+			<JSONComponent content={[{ phone: '(+92) 3094998057' }]} />
 		</CopyComponent>
 	);
 };
 const Location = () => {
 	return (
-		<CopyComponent>
-			<div className='flex'>
-				<p>Earth</p>
+		<>
+			<CopyComponent>
+				<JSONComponent content={[{ location: 'Earth' }]} />
+			</CopyComponent>
+			<div className='box-center'>
 				<EarthIcon />
 			</div>
-		</CopyComponent>
+		</>
 	);
 };
 
 const data = [
 	{
 		title: 'Message me',
-		content: [{ fileName: 'form', fileContent: Form }],
+		content: [{ fileName: 'form', fileContent: Form, icon: FormIcon }],
 	},
 	{
 		title: 'Contacts',
 		content: [
-			{ fileName: 'email', fileContent: Email, icon: AtRateIcon },
-			{ fileName: 'phone', fileContent: Phone, icon: PhoneIcon },
-			{ fileName: 'location', fileContent: Location, icon: LocationIcon },
+			{ fileName: 'email.json', fileContent: Email, icon: AtRateIcon },
+			{ fileName: 'phone.json', fileContent: Phone, icon: PhoneIcon },
+			{ fileName: 'location.json', fileContent: Location, icon: LocationIcon },
 		],
 	},
 ];
