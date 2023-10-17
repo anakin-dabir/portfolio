@@ -8,7 +8,7 @@ const SyntaxHighlighter = ({ children, height }) => {
 			wrapLines
 			// showLineNumbers
 			lineNumberStyle={{ paddingRight: 0 }}
-			className='bg-transparent !overflow-x-hidden [&>*]:text-textInactive [&>*]:font-sans [&>code]:break-words [&>code]:hyphens-auto'
+			className='bg-transparent !overflow-x-hidden [&>*]:text-textInactive [&>*]:font-sans [&>code]:break-words [&>code]:hyphens-auto [&>*]:cursor-text [&>*]:pointer-events-auto'
 			customStyle={{
 				backgroundColor: 'transparent',
 				height: height,
