@@ -1,21 +1,11 @@
-import Highlighter from 'react-syntax-highlighter';
+import useHeightCalculator from '../hooks/useHeightCalculator';
 
-const SyntaxHighlighter = ({ children, height }) => {
+const SyntaxHighlighter = ({ children }) => {
+	const { height } = useHeightCalculator();
 	return (
-		<Highlighter
-			language='text'
-			wrapLongLines
-			wrapLines
-			// showLineNumbers
-			lineNumberStyle={{ paddingRight: 0 }}
-			className='bg-transparent !overflow-x-hidden [&>*]:text-textInactive [&>*]:font-sans [&>code]:break-words [&>code]:hyphens-auto [&>*]:cursor-text [&>*]:pointer-events-auto'
-			customStyle={{
-				backgroundColor: 'transparent',
-				height: height,
-				padding: 0,
-			}}>
+		<div className='bg-transparent' style={{ height: height }}>
 			{children}
-		</Highlighter>
+		</div>
 	);
 };
 

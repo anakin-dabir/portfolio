@@ -20,7 +20,6 @@ const data = [
 		content: [
 			{
 				fileName: 'skills',
-				fileType: 'Component',
 				fileContent: SkillsData,
 			},
 		],
@@ -32,7 +31,7 @@ const data = [
 
 	{
 		title: 'Certifications',
-		content: [{ fileName: 'skills' }],
+		content: [{ fileName: '' }],
 	},
 ];
 

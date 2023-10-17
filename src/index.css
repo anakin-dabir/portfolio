@@ -201,3 +201,8 @@ p {
 	background-color: #1e2d3d;
 	top: 16.5%;
 }
+
+.lineNumberClass {
+	padding-right: 0;
+	margin-right: 50px;
+}
