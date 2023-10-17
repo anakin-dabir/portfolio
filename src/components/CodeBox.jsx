@@ -16,7 +16,7 @@ const CodeBox = ({ file, removeActiveFile }) => {
 					</button>
 				</div>
 			</div>
-			<div className='bg-dark flex-1 px-3 py-5'>
+			<div className='bg-dark flex-1 px-3 xl:px-10 py-5'>
 				{fileType === 'Component' ? (
 					<Component height={height} />
 				) : (

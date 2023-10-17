@@ -6,21 +6,18 @@ const Comp = () => {
 const data = [
 	{
 		title: 'Personal Info',
+		content: [{ fileName: 'info', fileContent: 'Hui' }],
+	},
+	{
+		title: 'Education',
 		content: [
-			{
-				fileName: 'Personal Info',
-				fileContent: 'Hi',
-				icon: NameIcon,
-			},
+			{ fileName: 'college', fileContent: 'Hui' },
+			{ fileName: 'university', fileContent: 'Hui' },
 		],
 	},
 	{
-		title: 'Contacts',
-		content: [
-			{ fileName: 'Personal Info', fileContent: 'Hui' },
-			{ fileName: 'DOB', fileContent: '' },
-			{ fileName: 'Comp', fileContent: Comp, fileType: 'Component' },
-		],
+		title: 'Experience',
+		content: [{ fileName: 'internship', fileContent: 'Hui' }],
 	},
 ];
 

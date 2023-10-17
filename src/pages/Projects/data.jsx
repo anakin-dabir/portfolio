@@ -5,18 +5,16 @@ const Skills = React.lazy(() => import('./Skills'));
 const SkillsData = ({ height }) => {
 	return (
 		<>
-			<React.Suspense fallback={<Loader />}>
-				<Skills height={height} />
-			</React.Suspense>
+			<div style={{ height: height }} className='overflow-y-auto relative'>
+				<React.Suspense fallback={<Loader absolute />}>
+					<Skills />
+				</React.Suspense>
+			</div>
 		</>
 	);
 };
 
 const data = [
-	{
-		title: 'Projects',
-		content: [{ fileName: 'Full Stack' }, { fileName: 'Front End' }, { fileName: 'html/css' }],
-	},
 	{
 		title: 'Skills',
 		content: [
@@ -28,7 +26,12 @@ const data = [
 		],
 	},
 	{
-		title: 'Certifications1',
+		title: 'Projects',
+		content: [{ fileName: 'Full Stack' }, { fileName: 'Front End' }, { fileName: 'html/css' }],
+	},
+
+	{
+		title: 'Certifications',
 		content: [{ fileName: 'skills' }],
 	},
 ];
