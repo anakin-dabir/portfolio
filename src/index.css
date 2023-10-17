@@ -30,6 +30,7 @@
 }
 input,
 textarea,
+a:focus,
 input:focus,
 select:focus,
 textarea:focus,
