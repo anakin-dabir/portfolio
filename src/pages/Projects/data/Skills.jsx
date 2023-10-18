@@ -1,14 +1,14 @@
-import { CssIcon, FigmaIcon, HtmlIcon, ReactIcon } from './icons/IconPack1';
-import { ExpressIcon, JsIcon, MongoIcon, TsIcon } from './icons/IconPack2';
+import { CssIcon, FigmaIcon, HtmlIcon, ReactIcon } from '../icons/IconPack1';
+import { ExpressIcon, JsIcon, MongoIcon, TsIcon } from '../icons/IconPack2';
 import {
 	MuiIcon,
 	NextIcon,
 	ReduxIcon,
 	SocketIcon,
 	TailwindIcon,
-} from './icons/IconPack3';
-import { FireBaseIcon, WebRTCIcon } from './icons/IconPack4';
-import { CIcon, RechartIcon } from './icons/IconPack5';
+} from '../icons/IconPack3';
+import { FireBaseIcon, WebRTCIcon } from '../icons/IconPack4';
+import { CIcon, RechartIcon } from '../icons/IconPack5';
 
 const Skills = () => {
 	return (
