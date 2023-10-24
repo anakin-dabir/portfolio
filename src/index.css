@@ -5,28 +5,28 @@
 @tailwind utilities;
 
 @layer utilities {
-	.box-center {
-		@apply flex;
-		@apply justify-center;
-		@apply items-center;
-	}
+  .box-center {
+    @apply flex;
+    @apply justify-center;
+    @apply items-center;
+  }
 }
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	border-color: #1e2d3d;
-	user-select: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-color: #1e2d3d;
+  user-select: none;
 }
 
 :root {
-	color: #e5e9f0;
-	background-color: #011627;
-	font-synthesis: none;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-text-size-adjust: 100%;
+  color: #e5e9f0;
+  background-color: #011627;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }
 input,
 textarea,
@@ -35,169 +35,181 @@ input:focus,
 select:focus,
 textarea:focus,
 button:focus {
-	outline: none;
-	background-color: transparent;
+  outline: none;
+  background-color: transparent;
 }
 
 select {
-	appearance: none;
+  appearance: none;
 }
 
 #root {
-	width: 100vw;
-	height: 100vh;
-	max-width: 100vw;
-	max-height: 100vh;
-	overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow-x: hidden;
 }
 
 p {
-	pointer-events: none;
+  pointer-events: none;
 }
 
 .running {
-	--color: #607b96;
-	--duration: 0.5s;
+  --color: #607b96;
+  --duration: 0.5s;
 }
 .outer {
-	animation: outer var(--duration) linear infinite;
+  animation: outer var(--duration) linear infinite;
 }
 .body {
-	background: var(--color);
-	height: 15px;
-	width: 10px;
-	border-radius: 10px;
-	transform-origin: 10px 10px;
-	position: relative;
-	transform: rotate(32deg);
-	animation: body var(--duration) linear infinite;
+  background: var(--color);
+  height: 15px;
+  width: 10px;
+  border-radius: 10px;
+  transform-origin: 10px 10px;
+  position: relative;
+  transform: rotate(32deg);
+  animation: body var(--duration) linear infinite;
 }
 .body:before {
-	content: '';
-	width: 10px;
-	height: 10px;
-	border-radius: 10px;
-	bottom: 16px;
-	left: 0;
-	position: absolute;
-	background: var(--color);
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  bottom: 16px;
+  left: 0;
+  position: absolute;
+  background: var(--color);
 }
 .arm,
 .arm:before,
 .leg,
 .leg:before {
-	content: '';
-	width: var(--w, 11px);
-	height: 4px;
-	top: var(--t, 0);
-	left: var(--l, 2px);
-	border-radius: 2px;
-	transform-origin: 2px 2px;
-	position: absolute;
-	background: var(--c, var(--color));
-	transform: rotate(var(--r, 0deg));
-	animation: var(--name, arm-leg) var(--duration) linear infinite;
+  content: '';
+  width: var(--w, 11px);
+  height: 4px;
+  top: var(--t, 0);
+  left: var(--l, 2px);
+  border-radius: 2px;
+  transform-origin: 2px 2px;
+  position: absolute;
+  background: var(--c, var(--color));
+  transform: rotate(var(--r, 0deg));
+  animation: var(--name, arm-leg) var(--duration) linear infinite;
 }
 .arm:before {
-	--l: 7px;
-	--name: arm-b;
+  --l: 7px;
+  --name: arm-b;
 }
 .arm.front {
-	--r: 24deg;
-	--r-to: 164deg;
+  --r: 24deg;
+  --r-to: 164deg;
 }
 .arm:before {
-	--r: -48deg;
-	--r-to: -36deg;
+  --r: -48deg;
+  --r-to: -36deg;
 }
 
 .arm.behind {
-	--r: 164deg;
-	--r-to: 24deg;
+  --r: 164deg;
+  --r-to: 24deg;
 }
 .arm.before {
-	--r: -36deg;
-	--r-to: -48deg;
+  --r: -36deg;
+  --r-to: -48deg;
 }
 
 .leg {
-	--w: 12px;
-	--t: 11px;
+  --w: 12px;
+  --t: 11px;
 }
 .leg:before {
-	--t: 0;
-	--l: 8px;
+  --t: 0;
+  --l: 8px;
 }
 .leg.front {
-	--r: 10deg;
-	--r-to: 100deg;
+  --r: 10deg;
+  --r-to: 100deg;
 }
 .leg:before {
-	--r: 10deg;
-	--r-to: 100deg;
+  --r: 10deg;
+  --r-to: 100deg;
 }
 
 .leg.behind {
-	--r: 100deg;
-	--r-to: 10deg;
-	--c: none;
+  --r: 100deg;
+  --r-to: 10deg;
+  --c: none;
 }
 .leg:before {
-	--c: var(--color);
-	--r: 76deg;
-	--r-to: 18deg;
+  --c: var(--color);
+  --r: 76deg;
+  --r-to: 18deg;
 }
 .leg:after {
-	content: '';
-	top: 0;
-	right: 0;
-	height: 4px;
-	width: 6px;
-	clip-path: polygon(2px 0, 6px 0, 6px 4px, 0 4px);
-	border-radius: 0 2px 2px 0;
-	position: absolute;
-	background: var(--color);
+  content: '';
+  top: 0;
+  right: 0;
+  height: 4px;
+  width: 6px;
+  clip-path: polygon(2px 0, 6px 0, 6px 4px, 0 4px);
+  border-radius: 0 2px 2px 0;
+  position: absolute;
+  background: var(--color);
 }
 
 @keyframes arm-leg {
-	50% {
-		transform: rotate(var(--r-to));
-	}
+  50% {
+    transform: rotate(var(--r-to));
+  }
 }
 
 @keyframes arm-b {
-	30%,
-	70% {
-		transform: rotate(var(--r-to));
-	}
+  30%,
+  70% {
+    transform: rotate(var(--r-to));
+  }
 }
 
 ::-webkit-scrollbar {
-	width: 3px;
+  width: 3px;
 }
 ::-webkit-scrollbar-thumb {
-	background-color: #1e2d3d;
+  background-color: #1e2d3d;
 }
 ::-webkit-scrollbar-track {
-	background-color: #011627;
+  background-color: #011627;
 }
 
 .form::before {
-	position: absolute;
-	content: '';
-	bottom: 80%;
-	width: 100%;
-	border-bottom: 2px solid #1e2d3d;
-	border-radius: 70%;
-	height: 30%;
-	background-color: #011627;
+  position: absolute;
+  content: '';
+  bottom: 80%;
+  width: 100%;
+  border-bottom: 2px solid #1e2d3d;
+  border-radius: 70%;
+  height: 30%;
+  background-color: #011627;
 }
 .form::after {
-	position: absolute;
-	content: '';
-	width: 30px;
-	height: 30px;
-	border-radius: 100%;
-	background-color: #1e2d3d;
-	top: 16.5%;
+  position: absolute;
+  content: '';
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: #1e2d3d;
+  top: 16.5%;
+}
+
+.animator {
+  animation: animator 1s linear;
+}
+@keyframes animator {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
