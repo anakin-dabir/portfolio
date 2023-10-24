@@ -3,7 +3,7 @@
 
 const JSONComponent = ({content}) => {
   return (
-    <div className='box-center !text-textInactive text-sm md:text-base animate-bouncing'>
+    <div className='box-center !text-textInactive text-sm md:text-base'>
       <div>
         <p className='text-white'>{'{'}</p>
         {content.map((content, i, arr) => {

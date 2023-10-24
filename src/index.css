@@ -203,13 +203,21 @@ p {
 }
 
 .animator {
-  animation: animator 1s linear;
+  animation: animator 0.3s ease-out;
 }
 @keyframes animator {
   0% {
-    transform: translateX(-100%);
+    width: 50vw;
+    height: 50vh;
   }
+}
+.animator1 {
+  animation: animator1 0.3s ease-out;
+}
+@keyframes animator1 {
   100% {
-    transform: translateX(0);
+    width: 40vw;
+    opacity: 0;
+    height: 40vh;
   }
 }

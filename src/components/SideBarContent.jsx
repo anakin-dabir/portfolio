@@ -17,7 +17,7 @@ const SideBarContent = ({title, content, onClick, isActive, handleFileClick, fil
         </div>
       </button>
       <div
-        className={`overflow-hidden mb-[3px] bg-dark transition-all ease-in-out duration-500   ${
+        className={`overflow-hidden mb-[3px] bg-dark transition-all ease-in-out duration-500 ${
           isActive ? 'max-h-40' : 'max-h-0'
         }`}
       >
