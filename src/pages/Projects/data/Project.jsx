@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Portal from './Portal';
+import Chess from '../../../assets/chess.png';
 
 const Project = () => {
   return (
@@ -34,12 +35,9 @@ const ProjectItems = ({data}) => {
                   src={data.src}
                   className='group-hover:scale-150 h-full w-full object-contain opacity-100  transition-transform'
                 />
-                <div className='absolute left-0 bg-black inset-0 opacity-0 group-hover:opacity-70 transition-opacity h-full w-full top-0'></div>
-                <div className='absolute w-full opacity-0 top-0 group-hover:opacity-70 cursor-pointer'>
-                  <div className='text-primary font-bold uppercase text-2xl'>{data.name}</div>
-                </div>
-                <div className='absolute  w-full opacity-0 bottom-0 group-hover:opacity-70 cursor-pointer'>
-                  <div className='text-secondary'> #react , #tailwindcss</div>
+                <div className='absolute left-0 bg-black  opacity-70 md:opacity-0 pl-2 sm:p-5 flex flex-col items-start justify-center sm:items-center group-hover:opacity-70 transition-opacity h-full w-full top-0'>
+                  <div className='text-primary font-bold uppercase md:text-2xl'>{data.name}</div>
+                  <div className='text-secondary'>{data.stack}</div>
                 </div>
               </div>
             </button>
@@ -53,24 +51,24 @@ const ProjectItems = ({data}) => {
 
 const data = [
   {
-    className: 'w-full bg-black col-span-2',
-    src: 'https://themewagon.com/wp-content/uploads/2021/11/purple-react-1.png',
-    name: 'SnakeGame',
+    className: 'w-full bg-black',
+    src: Chess,
+    name: 'Snake Game',
     stack: 'React, MongoDB, ExpressJS, JWT, Recharts, Tailwindcss',
   },
   {
-    className: 'w-full bg-black col-span-2',
-    src: 'https://themewagon.com/wp-content/uploads/2021/11/purple-react-1.png',
+    className: 'w-full bg-black',
+    src: '',
     name: 'SnakeGame2',
   },
   {
-    className: 'w-full bg-black',
-    src: 'https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8fDA%3D',
+    className: 'w-full  bg-black',
+    src: '',
     name: 'SnakeGame3',
   },
   {
     className: 'w-full bg-black',
-    src: 'https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8fDA%3D',
+    src: '',
     name: 'SnakeGame4',
   },
 ];
