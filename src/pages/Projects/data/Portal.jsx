@@ -24,18 +24,35 @@ const Portal = ({isOpen, setOpen, data, index}) => {
       )}
       <div
         ref={ref}
-        className={`h-[80vh] w-[90vw] md:h-[80vh] overflow-y-auto flex-col md:w-[75vw] top-1/2 z-[60] left-1/2 -translate-x-1/2 -translate-y-1/2 fixed ${
+        className={`bg-borderColor  w-[90vw] snap-y  md:h-[80vh] overflow-y-auto md:w-[75vw] top-1/2 z-[60] left-1/2 -translate-x-1/2 -translate-y-1/2 fixed ${
           isOpen === index ? 'animator' : 'animator1'
-        }  bg-borderColor ${isOpen === index ? 'flex' : ''}`}
+        }`}
       >
-        <div className='flex items-center flex-col h-full w-full p-4'>
-          {/* <div className='h-60 w-full'> */}
-          <img src={data.src} className='h-full w-full object-contain' />
-          {/* </div> */}
+        <div className='flex snap-start items-center flex-col h-full w-full'>
+          <img src={data.src} className='h-[80vh] w-full object-contain' />
         </div>
-        <div className='flex flex-col'>
+        <div className='flex snap-start h-[80vh] w-full bg-dark box-center flex-col'>
           <span>{`{`}</span>
           <span>{`  name: "Wons Dashboard",`}</span>
+          <span>{`  stack: "React, MUI, ExpressJS",`}</span>
+          <span>{`  stack: "React, MUI, ExpressJS",`}</span>
+          <span>{`  stack: "React, MUI, ExpressJS",`}</span>
+          <span>{`  stack: "React, MUI, ExpressJS",`}</span>
+          <span>{`  stack: "React, MUI, ExpressJS",`}</span>
+          <span>{`  stack: "React, MUI, ExpressJS",`}</span>
+          <span>{`  stack: "React, MUI, ExpressJS",`}</span>
+          <span>{`  stack: "React, MUI, ExpressJS",`}</span>
+          <span>{`  stack: "React, MUI, ExpressJS",`}</span>
+          <span>{`  stack: "React, MUI, ExpressJS",`}</span>
+          <span>{`  stack: "React, MUI, ExpressJS",`}</span>
+          <span>{`  stack: "React, MUI, ExpressJS",`}</span>
+          <span>{`  stack: "React, MUI, ExpressJS",`}</span>
+          <span>{`  stack: "React, MUI, ExpressJS",`}</span>
+          <span>{`  stack: "React, MUI, ExpressJS",`}</span>
+          <span>{`  stack: "React, MUI, ExpressJS",`}</span>
+          <span>{`  stack: "React, MUI, ExpressJS",`}</span>
+          <span>{`  stack: "React, MUI, ExpressJS",`}</span>
+          <span>{`  stack: "React, MUI, ExpressJS",`}</span>
           <span>{`  stack: "React, MUI, ExpressJS",`}</span>
           <span>{`  stack: "React, MUI, ExpressJS",`}</span>
           <span>{`}`}</span>

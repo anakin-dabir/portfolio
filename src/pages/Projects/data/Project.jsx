@@ -4,7 +4,7 @@ import Portal from './Portal';
 const Project = () => {
   return (
     <>
-      <div class='grid w-full p-10 md:grid-rows-10 md:grid-cols-2 gap-3'>
+      <div class='grid w-full md:p-10 md:grid-rows-10 md:grid-cols-2 gap-3'>
         <ProjectItems data={data} />
       </div>
     </>
@@ -35,7 +35,12 @@ const ProjectItems = ({data}) => {
                   className='group-hover:scale-150 h-full w-full object-contain opacity-100  transition-transform'
                 />
                 <div className='absolute left-0 bg-black inset-0 opacity-0 group-hover:opacity-70 transition-opacity h-full w-full top-0'></div>
-                {/* <div className='absolute h-40 bg-black w-full bottom-0 group-hover:flex cursor-pointer'></div> */}
+                <div className='absolute w-full opacity-0 top-0 group-hover:opacity-70 cursor-pointer'>
+                  <div className='text-primary font-bold uppercase text-2xl'>{data.name}</div>
+                </div>
+                <div className='absolute  w-full opacity-0 bottom-0 group-hover:opacity-70 cursor-pointer'>
+                  <div className='text-secondary'> #react , #tailwindcss</div>
+                </div>
               </div>
             </button>
             <Portal isOpen={activeIndex} setOpen={handleItemClick} index={i} data={data} />
