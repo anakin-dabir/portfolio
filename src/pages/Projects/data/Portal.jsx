@@ -1,6 +1,5 @@
 import React, {useEffect, useRef} from 'react';
 import {createPortal} from 'react-dom';
-import Chess1 from '../../../assets/chess1.png';
 
 const Portal = ({isOpen, setOpen, data, index}) => {
   const ref = useRef(null);
@@ -95,10 +94,10 @@ const Portal = ({isOpen, setOpen, data, index}) => {
               <img src={data.src} alt='' className='object-cover' />
             </div>
             <div className=''>
-              <img src={Chess1} alt='' className='object-cover' />
+              <img src={data.src1} alt='' className='object-cover' />
             </div>
             <div>
-              <img src={data.src} alt='' className='object-cover' />
+              <img src={data.src2} alt='' className='object-cover' />
             </div>
           </div>
         </div>
