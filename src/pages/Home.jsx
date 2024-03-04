@@ -21,7 +21,7 @@ const Home = () => {
                 cursorColor='#43D9AD'
                 loop
                 cursor
-                words={[' Full Stack Engineer', ' React Developer']}
+                words={[' Full Stack Developer', ' React Developer']}
               />
             </p>
           </div>
