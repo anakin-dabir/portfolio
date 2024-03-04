@@ -1,0 +1,151 @@
+{
+  "personal": {
+    "username": "anakin-dabir",
+    "name": "Talha Arshad",
+    "github": "https://github.com/anakin-dabir",
+    "linkedin": "https://www.linkedin.com/in/anakin-dabir",
+    "tagline": [" Full Stack Developer", " React Developer"]
+  },
+  "contact": {
+    "email": [{ "email": "anakindabir@gmail.com", "copy": true }],
+    "phone": [{ "phone": "(+92)", "copy": true }],
+    "location": [{ "location": "Earth", "copy": true }]
+  },
+  "about": {
+    "info": "I am a passionate and results-oriented React and Full Stack Developer with a strong understanding of front-end and back-end development principles. I am skilled in building interactive and user-friendly web applications using React and other relevant technologies. I am also proficient in various back-end technologies, allowing me to work on projects from conception to deployment. I am a team player with excellent communication and problem-solving skills, always eager to learn and grow my skillset",
+    "education": {
+      "university": [
+        { "name": "University of the Punjab" },
+        { "degree": "BS Computer Science" },
+        { "duration": "(2021-2025)" }
+      ]
+    },
+    "experience": {
+      "ebryx": [
+        { "title": "Full-stack Developer" },
+        { "company": "Ebryx (Pvt.) Ltd." },
+        { "duration": "June 2023 - Aug 2023 (3 mos)" }
+      ],
+      "devfum": [
+        { "title": "Software Engineering Internship" },
+        { "company": "Devfum (Pvt.) Ltd." },
+        { "duration": "Sept 2023 - Dec 2023 (4 mos)" }
+      ],
+      "devfum2": [
+        { "title": "Full-stack Developer" },
+        { "company": "Devfum (Pvt.) Ltd." },
+        { "duration": "Jan 2024 - present" }
+      ]
+    }
+  },
+  "projects": {
+    "certificates": {
+      "react": [
+        { "title": "Advanced React" },
+        { "by": "Meta" },
+        { "recieved": "April 08, 2023" },
+        {
+          "id": "Show Credentials",
+          "link": true,
+          "to": "https://coursera.org/verify/HC3MN6MF9UXN"
+        }
+      ],
+      "frontend": [
+        { "title": "FrontEnd with React" },
+        { "by": "IBM - Coursera" },
+        { "recieved": "April 07, 2023" },
+        {
+          "id": "Show Credentials",
+          "link": true,
+          "to": "https://coursera.org/verify/RDCGFDH8FHHP"
+        }
+      ],
+      "backend": [
+        { "title": "BackEnd with Node.js & Express" },
+        { "by": "IBM - Coursera" },
+        { "recieved": "April 09, 2023" },
+        {
+          "id": "Show Credentials",
+          "link": true,
+          "to": "https://coursera.org/verify/VE3F9C2JDQDY"
+        }
+      ]
+    },
+    "projects": {
+      "frontend": [
+        { "title": "v1 Portfolio" },
+        { "desc": "All front-end projects are on this website" },
+        { "tech": "NextJS, TypeScript, Material-UI" },
+        {
+          "website": "https://v1.anakin-dabir.vercel.app",
+          "link": true,
+          "to": "https://v1.anakin-dabir.vercel.app"
+        },
+        {
+          "github": "anakin-dabir/portfolioV1",
+          "link": true,
+          "to": "https://github.com/anakin-dabir/portfolioV1"
+        }
+      ],
+      "collaboradocs": [
+        { "title": "Collaboradocs" },
+        {
+          "tagLine": "Real-time collaboration, anywhere, anytime"
+        },
+        {
+          "desc": "Comprehensive platform for storing, tracking, sharing and managing project documentation seamlessly"
+        },
+        {
+          "tech": "React, Javascript, Redux-toolkit, Material-UI, tailwindcss, express, mongoose, socket.io, tiptap-editor"
+        },
+        {
+          "github": "anakin-dabir/collaboradocs",
+          "link": true,
+          "to": "https://github.com/anakin-dabir/collaboradocs"
+        }
+      ],
+      "evently": [
+        { "title": "Collaboradocs" },
+        {
+          "desc": "a convenient platform for creating, managing, and scheduling events dynamically"
+        },
+        {
+          "tech": "React, Javascript, Zustand, express, tailwindcss, Material-UI, mongoose, socket.io, pm2"
+        },
+        {
+          "github": "anakin-dabir/evently-23",
+          "link": true,
+          "to": "https://github.com/anakin-dabir/evently-23"
+        }
+      ],
+      "vetmeet": [
+        { "title": "VetMeet" },
+        {
+          "desc": "Web based solution to connect with veterans and engage them into community services based on their interests"
+        },
+        {
+          "tech": "React, Javascript, Redux, express, Material-UI, mongoose, twilio"
+        },
+        {
+          "github": "anakin-dabir/vetmeet",
+          "link": true,
+          "to": "https://github.com/anakin-dabir/vetmeet"
+        }
+      ],
+      "smartEd": [
+        { "title": "SmartEd" },
+        {
+          "desc": "Web application provides a comprehensive platform for instructors and students to interact and facilitate learning"
+        },
+        {
+          "tech": "React, Javascript, axios, express, tailwindcss, mongoose, daisyui"
+        },
+        {
+          "github": "anakin-dabir/smartEd",
+          "link": true,
+          "to": "https://github.com/anakin-dabir/smartEd"
+        }
+      ]
+    }
+  }
+}

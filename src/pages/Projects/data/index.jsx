@@ -3,6 +3,7 @@ import JSONComponent from "../../../components/JSONComponent";
 import Loader from "../../../components/Loader";
 import Project from "./Project";
 const Skills = React.lazy(() => import("./Skills"));
+import json from "../../../data/data.json";
 
 const SkillsData = ({ height }) => {
   return (
@@ -17,184 +18,49 @@ const SkillsData = ({ height }) => {
 };
 
 const ReactCertificate = () => {
-  return (
-    <>
-      <JSONComponent
-        content={[
-          { title: "Advanced React" },
-          { by: "Meta" },
-          { recieved: "April 08, 2023" },
-          {
-            id: "Show Credentials",
-            link: true,
-            to: "https://coursera.org/verify/HC3MN6MF9UXN",
-          },
-        ]}
-      />
-    </>
-  );
+  return <JSONComponent content={json.projects.certificates.react} />;
 };
 const FrontEndCertificate = () => {
-  return (
-    <>
-      <JSONComponent
-        content={[
-          { title: "FrontEnd with React" },
-          { by: "IBM - Coursera" },
-          { recieved: "April 07, 2023" },
-          {
-            id: "Show Credentials",
-            link: true,
-            to: "https://coursera.org/verify/RDCGFDH8FHHP",
-          },
-        ]}
-      />
-    </>
-  );
+  return <JSONComponent content={json.projects.certificates.frontend} />;
 };
 const BackendCertificate = () => {
-  return (
-    <>
-      <JSONComponent
-        content={[
-          { title: "BackEnd with Node.js & Express" },
-          { by: "IBM - Coursera" },
-          { recieved: "April 09, 2023" },
-          {
-            id: "Show Credentials",
-            link: true,
-            to: "https://coursera.org/verify/VE3F9C2JDQDY",
-          },
-        ]}
-      />
-    </>
-  );
-};
-const CyberSecurity = () => {
-  return (
-    <>
-      <JSONComponent
-        content={[
-          { title: "Cybersecurity" },
-          { by: "Bytewise" },
-          { recieved: "June, 2023" },
-          {
-            id: "Show Credentials",
-            link: true,
-            to: "https://certificate.givemycertificate.com/c/774d233a-63ff-4719-bed1-5a46984aecde",
-          },
-        ]}
-      />
-    </>
-  );
+  return <JSONComponent content={json.projects.certificates.backend} />;
 };
 
+// const CyberSecurity = () => {
+//   return (
+//     <JSONComponent
+//       content={[
+//         { title: "Cybersecurity" },
+//         { by: "Bytewise" },
+//         { recieved: "June, 2023" },
+//         {
+//           id: "Show Credentials",
+//           link: true,
+//           to: "https://certificate.givemycertificate.com/c/774d233a-63ff-4719-bed1-5a46984aecde",
+//         },
+//       ]}
+//     />
+//   );
+// };
+
 const FrontEndProjects = () => {
-  return (
-    <JSONComponent
-      content={[
-        { title: "v1 Portfolio" },
-        { desc: "All front-end projects are on this website" },
-        { tech: "NextJS, TypeScript, Material-UI" },
-        {
-          website: "https://v1.anakin-dabir.vercel.app",
-          link: true,
-          to: "https://v1.anakin-dabir.vercel.app",
-        },
-        {
-          github: "anakin-dabir/portfolioV1",
-          link: true,
-          to: "https://github.com/anakin-dabir/portfolioV1",
-        },
-      ]}
-    />
-  );
+  return <JSONComponent content={json.projects.projects.frontend} />;
 };
 
 const Collaboradocs = () => {
-  return (
-    <JSONComponent
-      content={[
-        { title: "Collaboradocs" },
-        {
-          tagLine: "Real-time collaboration, anywhere, anytime",
-        },
-        {
-          desc: "Comprehensive platform for storing, tracking, sharing and managing project documentation seamlessly",
-        },
-        {
-          tech: "React, Javascript, Redux-toolkit, Material-UI, tailwindcss, express, mongoose, socket.io, tiptap-editor",
-        },
-        {
-          github: "anakin-dabir/collaboradocs",
-          link: true,
-          to: "https://github.com/anakin-dabir/collaboradocs",
-        },
-      ]}
-    />
-  );
+  return <JSONComponent content={json.projects.projects.collaboradocs} />;
 };
 
 const Evently = () => {
-  return (
-    <JSONComponent
-      content={[
-        { title: "Collaboradocs" },
-        {
-          desc: "a convenient platform for creating, managing, and scheduling events dynamically",
-        },
-        {
-          tech: "React, Javascript, Zustand, express, tailwindcss, Material-UI, mongoose, socket.io, pm2",
-        },
-        {
-          github: "anakin-dabir/evently-23",
-          link: true,
-          to: "https://github.com/anakin-dabir/evently-23",
-        },
-      ]}
-    />
-  );
+  return <JSONComponent content={json.projects.projects.evently} />;
 };
 
 const Vetmeet = () => {
-  return (
-    <JSONComponent
-      content={[
-        { title: "VetMeet" },
-        {
-          desc: "Web based solution to connect with veterans and engage them into community services based on their interests",
-        },
-        {
-          tech: "React, Javascript, Redux, express, Material-UI, mongoose, twilio",
-        },
-        {
-          github: "anakin-dabir/vetmeet",
-          link: true,
-          to: "https://github.com/anakin-dabir/vetmeet",
-        },
-      ]}
-    />
-  );
+  return <JSONComponent content={json.projects.projects.vetmeet} />;
 };
 const SmartED = () => {
-  return (
-    <JSONComponent
-      content={[
-        { title: "SmartEd" },
-        {
-          desc: "Web application provides a comprehensive platform for instructors and students to interact and facilitate learning",
-        },
-        {
-          tech: "React, Javascript, axios, express, tailwindcss, mongoose, daisyui",
-        },
-        {
-          github: "anakin-dabir/smartEd",
-          link: true,
-          to: "https://github.com/anakin-dabir/smartEd",
-        },
-      ]}
-    />
-  );
+  return <JSONComponent content={json.projects.projects.smartEd} />;
 };
 
 const data = [

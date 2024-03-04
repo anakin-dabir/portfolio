@@ -1,6 +1,7 @@
 import { Typewriter } from "react-simple-typewriter";
 import Game from "../components/game/Game";
 import BackGroundGlow from "../components/BackGroundGlow";
+import data from "../data/data.json";
 
 const Home = () => {
   return (
@@ -11,7 +12,7 @@ const Home = () => {
           <div className="flex flex-col gap-2">
             <p>Presenting you the Freak!!</p>
             <p className="text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-green-300 via-blue-500 to-purple-600">
-              Talha Arshad
+              {data.personal.name}
             </p>
             <p className="text-primary text-xl md:text-3xl">
               <span className="">{"->"}</span>
@@ -21,7 +22,7 @@ const Home = () => {
                 cursorColor="#43D9AD"
                 loop
                 cursor
-                words={[" Full Stack Developer", " React Developer"]}
+                words={data.personal.tagline}
               />
             </p>
           </div>
@@ -32,7 +33,7 @@ const Home = () => {
               <span className="text-primary">github</span>
               <span> = </span>
               <span className="text-secondary !pointer-events-auto !select-text !cursor-text">
-                "https://github.com/anakin-dabir"
+                {`"${data.personal.github}"`}
               </span>
             </p>
           </div>

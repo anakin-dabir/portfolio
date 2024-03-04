@@ -1,4 +1,5 @@
 import React from "react";
+import data from "../data/data.json";
 
 const Footer = () => {
   return (
@@ -7,7 +8,7 @@ const Footer = () => {
         <p>find me in:</p>
       </div>
       <div className="flex items-center md:border-r pr-4 md:px-4">
-        <a href="https://www.linkedin.com/in/anakin-dabir" className="group transition-colors">
+        <a href={data.personal.linkedin} className="group transition-colors">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="fill-textInactive  group-hover:fill-textActive transition-colors"
@@ -20,7 +21,7 @@ const Footer = () => {
       </div>
       <div className="flex-1"></div>
       <a
-        href="https://github.com/anakin-dabir"
+        href={data.personal.github}
         className="flex items-center md:border-l pl-6 gap-3 group hover:text-textActive transition-colors"
       >
         @anakin-dabir
