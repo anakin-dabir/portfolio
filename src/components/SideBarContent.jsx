@@ -18,7 +18,7 @@ const SideBarContent = ({ title, content, onClick, isActive, handleFileClick, fi
       </button>
       <div
         className={`overflow-hidden mb-[3px] bg-dark transition-all ease-in-out duration-500 ${
-          isActive ? "max-h-40" : "max-h-0"
+          isActive ? "max-h-56" : "max-h-0"
         }`}
       >
         <div className="flex flex-col gap-4 py-3 pl-3">

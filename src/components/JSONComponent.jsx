@@ -5,7 +5,7 @@ const JSONComponent = ({ content }) => {
   let count = 1;
   return (
     <div className=" !text-textInactive text-sm md:text-base">
-      <div>
+      <div className="flex flex-col gap-1">
         <p className="text-white">
           <span className="text-white/50 text-sm pr-10 hidden sm:inline-block">{count}</span>
           {"{"}

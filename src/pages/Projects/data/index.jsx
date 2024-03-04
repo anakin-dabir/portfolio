@@ -89,6 +89,114 @@ const CyberSecurity = () => {
   );
 };
 
+const FrontEndProjects = () => {
+  return (
+    <JSONComponent
+      content={[
+        { title: "v1 Portfolio" },
+        { desc: "All front-end projects are on this website" },
+        { tech: "NextJS, TypeScript, Material-UI" },
+        {
+          website: "https://v1.anakin-dabir.vercel.app",
+          link: true,
+          to: "https://v1.anakin-dabir.vercel.app",
+        },
+        {
+          github: "anakin-dabir/portfolioV1",
+          link: true,
+          to: "https://github.com/anakin-dabir/portfolioV1",
+        },
+      ]}
+    />
+  );
+};
+
+const Collaboradocs = () => {
+  return (
+    <JSONComponent
+      content={[
+        { title: "Collaboradocs" },
+        {
+          tagLine: "Real-time collaboration, anywhere, anytime",
+        },
+        {
+          desc: "Comprehensive platform for storing, tracking, sharing and managing project documentation seamlessly",
+        },
+        {
+          tech: "React, Javascript, Redux-toolkit, Material-UI, tailwindcss, express, mongoose, socket.io, tiptap-editor",
+        },
+        {
+          github: "anakin-dabir/collaboradocs",
+          link: true,
+          to: "https://github.com/anakin-dabir/collaboradocs",
+        },
+      ]}
+    />
+  );
+};
+
+const Evently = () => {
+  return (
+    <JSONComponent
+      content={[
+        { title: "Collaboradocs" },
+        {
+          desc: "a convenient platform for creating, managing, and scheduling events dynamically",
+        },
+        {
+          tech: "React, Javascript, Zustand, express, tailwindcss, Material-UI, mongoose, socket.io, pm2",
+        },
+        {
+          github: "anakin-dabir/evently-23",
+          link: true,
+          to: "https://github.com/anakin-dabir/evently-23",
+        },
+      ]}
+    />
+  );
+};
+
+const Vetmeet = () => {
+  return (
+    <JSONComponent
+      content={[
+        { title: "VetMeet" },
+        {
+          desc: "Web based solution to connect with veterans and engage them into community services based on their interests",
+        },
+        {
+          tech: "React, Javascript, Redux, express, Material-UI, mongoose, twilio",
+        },
+        {
+          github: "anakin-dabir/vetmeet",
+          link: true,
+          to: "https://github.com/anakin-dabir/vetmeet",
+        },
+      ]}
+    />
+  );
+};
+const SmartED = () => {
+  return (
+    <JSONComponent
+      content={[
+        { title: "SmartEd" },
+        {
+          desc: "Web application provides a comprehensive platform for instructors and students to interact and facilitate learning",
+        },
+        {
+          tech: "React, Javascript, axios, express, tailwindcss, mongoose, daisyui",
+        },
+        {
+          github: "anakin-dabir/smartEd",
+          link: true,
+          to: "https://github.com/anakin-dabir/smartEd",
+        },
+      ]}
+    />
+  );
+};
+
 const data = [
   {
     title: "Skills",
@@ -102,6 +210,26 @@ const data = [
   {
     title: "Projects",
     content: [
+      {
+        fileName: "FrontEnd",
+        fileContent: FrontEndProjects,
+      },
+      {
+        fileName: "Collaboradocs",
+        fileContent: Collaboradocs,
+      },
+      {
+        fileName: "Evently",
+        fileContent: Evently,
+      },
+      {
+        fileName: "SmartEd",
+        fileContent: SmartED,
+      },
+      {
+        fileName: "Vetmeet",
+        fileContent: Vetmeet,
+      },
       {
         fileName: "React",
         fileContent: Project,
@@ -123,10 +251,6 @@ const data = [
         fileName: "Backend",
         fileContent: BackendCertificate,
       },
-      // {
-      // 	fileName: 'CyberSecurity',
-      // 	fileContent: CyberSecurity,
-      // },
     ],
   },
 ];
