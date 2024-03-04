@@ -11,7 +11,7 @@ const Home = () => {
           <div className='flex flex-col gap-2'>
             <p>Presenting you the Freak!!</p>
             <p className='text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-green-300 via-blue-500 to-purple-600'>
-              Anakin Dabir
+              Talha Arshad
             </p>
             <p className='text-primary text-xl md:text-3xl'>
               <span className=''>{'->'}</span>
