@@ -1,32 +1,32 @@
-import SideBarContent from './SideBarContent';
-import { useState } from 'react';
+import SideBarContent from "./SideBarContent";
+import { useState } from "react";
 
 const Accordion = ({ items, handleFileClick, file }) => {
-	const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(null);
 
-	const handleItemClick = (index) => {
-		if (index === activeIndex) {
-			setActiveIndex(null);
-		} else {
-			setActiveIndex(index);
-		}
-	};
+  const handleItemClick = index => {
+    if (index === activeIndex) {
+      setActiveIndex(null);
+    } else {
+      setActiveIndex(index);
+    }
+  };
 
-	return (
-		<div className='accordion'>
-			{items.map((item, index) => (
-				<SideBarContent
-					key={index}
-					title={item.title}
-					content={item.content}
-					isActive={index === activeIndex}
-					onClick={() => handleItemClick(index)}
-					handleFileClick={handleFileClick}
-					file={file}
-					index={index}
-				/>
-			))}
-		</div>
-	);
+  return (
+    <div className="accordion">
+      {items.map((item, index) => (
+        <SideBarContent
+          key={index}
+          title={item.title}
+          content={item.content}
+          isActive={index === activeIndex}
+          onClick={() => handleItemClick(index)}
+          handleFileClick={handleFileClick}
+          file={file}
+          index={index}
+        />
+      ))}
+    </div>
+  );
 };
 export default Accordion;

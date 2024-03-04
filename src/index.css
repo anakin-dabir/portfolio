@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -73,7 +73,7 @@ p {
   animation: body var(--duration) linear infinite;
 }
 .body:before {
-  content: '';
+  content: "";
   width: 10px;
   height: 10px;
   border-radius: 10px;
@@ -86,7 +86,7 @@ p {
 .arm:before,
 .leg,
 .leg:before {
-  content: '';
+  content: "";
   width: var(--w, 11px);
   height: 4px;
   top: var(--t, 0);
@@ -148,7 +148,7 @@ p {
   --r-to: 18deg;
 }
 .leg:after {
-  content: '';
+  content: "";
   top: 0;
   right: 0;
   height: 4px;
@@ -184,7 +184,7 @@ p {
 
 .form::before {
   position: absolute;
-  content: '';
+  content: "";
   bottom: 80%;
   width: 100%;
   border-bottom: 2px solid #1e2d3d;
@@ -194,7 +194,7 @@ p {
 }
 .form::after {
   position: absolute;
-  content: '';
+  content: "";
   width: 30px;
   height: 30px;
   border-radius: 100%;

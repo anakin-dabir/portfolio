@@ -1,13 +1,13 @@
-import React from 'react';
-import JSONComponent from '../../../components/JSONComponent';
-import Loader from '../../../components/Loader';
-import Project from './Project';
-const Skills = React.lazy(() => import('./Skills'));
+import React from "react";
+import JSONComponent from "../../../components/JSONComponent";
+import Loader from "../../../components/Loader";
+import Project from "./Project";
+const Skills = React.lazy(() => import("./Skills"));
 
-const SkillsData = ({height}) => {
+const SkillsData = ({ height }) => {
   return (
     <>
-      <div style={{height: height}} className='overflow-y-auto relative'>
+      <div style={{ height: height }} className="overflow-y-auto relative">
         <React.Suspense fallback={<Loader absolute />}>
           <Skills />
         </React.Suspense>
@@ -21,13 +21,13 @@ const ReactCertificate = () => {
     <>
       <JSONComponent
         content={[
-          {name: 'Advanced React'},
-          {by: 'Meta'},
-          {recieved: 'April 08, 2023'},
+          { title: "Advanced React" },
+          { by: "Meta" },
+          { recieved: "April 08, 2023" },
           {
-            id: 'Show Credentials',
+            id: "Show Credentials",
             link: true,
-            to: 'https://coursera.org/verify/HC3MN6MF9UXN',
+            to: "https://coursera.org/verify/HC3MN6MF9UXN",
           },
         ]}
       />
@@ -39,13 +39,13 @@ const FrontEndCertificate = () => {
     <>
       <JSONComponent
         content={[
-          {name: 'FrontEnd with React'},
-          {by: 'IBM - Coursera'},
-          {recieved: 'April 07, 2023'},
+          { title: "FrontEnd with React" },
+          { by: "IBM - Coursera" },
+          { recieved: "April 07, 2023" },
           {
-            id: 'Show Credentials',
+            id: "Show Credentials",
             link: true,
-            to: 'https://coursera.org/verify/RDCGFDH8FHHP',
+            to: "https://coursera.org/verify/RDCGFDH8FHHP",
           },
         ]}
       />
@@ -57,13 +57,13 @@ const BackendCertificate = () => {
     <>
       <JSONComponent
         content={[
-          {name: 'BackEnd with Node.js & Express'},
-          {by: 'IBM - Coursera'},
-          {recieved: 'April 09, 2023'},
+          { title: "BackEnd with Node.js & Express" },
+          { by: "IBM - Coursera" },
+          { recieved: "April 09, 2023" },
           {
-            id: 'Show Credentials',
+            id: "Show Credentials",
             link: true,
-            to: 'https://coursera.org/verify/VE3F9C2JDQDY',
+            to: "https://coursera.org/verify/VE3F9C2JDQDY",
           },
         ]}
       />
@@ -75,13 +75,13 @@ const CyberSecurity = () => {
     <>
       <JSONComponent
         content={[
-          {name: 'Cybersecurity'},
-          {by: 'Bytewise'},
-          {recieved: 'June, 2023'},
+          { title: "Cybersecurity" },
+          { by: "Bytewise" },
+          { recieved: "June, 2023" },
           {
-            id: 'Show Credentials',
+            id: "Show Credentials",
             link: true,
-            to: 'https://certificate.givemycertificate.com/c/774d233a-63ff-4719-bed1-5a46984aecde',
+            to: "https://certificate.givemycertificate.com/c/774d233a-63ff-4719-bed1-5a46984aecde",
           },
         ]}
       />
@@ -91,36 +91,36 @@ const CyberSecurity = () => {
 
 const data = [
   {
-    title: 'Skills',
+    title: "Skills",
     content: [
       {
-        fileName: 'skills',
+        fileName: "skills",
         fileContent: SkillsData,
       },
     ],
   },
   {
-    title: 'Projects',
+    title: "Projects",
     content: [
       {
-        fileName: 'React',
+        fileName: "React",
         fileContent: Project,
       },
     ],
   },
   {
-    title: 'Certifications',
+    title: "Certifications",
     content: [
       {
-        fileName: 'React',
+        fileName: "React",
         fileContent: ReactCertificate,
       },
       {
-        fileName: 'FrontEnd',
+        fileName: "FrontEnd",
         fileContent: FrontEndCertificate,
       },
       {
-        fileName: 'Backend',
+        fileName: "Backend",
         fileContent: BackendCertificate,
       },
       // {
