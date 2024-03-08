@@ -2,7 +2,13 @@ import JSONComponent from "../../components/JSONComponent";
 import json from "../../data/data.json";
 
 const PersonalInfo = () => {
-  return <div className="max-w-screen-md md:mt-5 md:ml-5 text-white">{json.about.info}</div>;
+  return (
+    <>
+      <div className='md:mt-5'>/*</div>
+      <div className='max-w-screen-md md:ml-5'>{json.about.info}</div>
+      <div>*/</div>
+    </>
+  );
 };
 
 const University = () => {
