@@ -1,0 +1,29 @@
+
+      "vetmeet": [
+        { "title": "VetMeet" },
+        {
+          "desc": "Web based solution to connect with veterans and engage them into community services based on their interests"
+        },
+        {
+          "tech": "React, Javascript, Redux, express, Material-UI, mongoose, twilio"
+        },
+        {
+          "github": "anakin-dabir/vetmeet",
+          "link": true,
+          "to": "https://github.com/anakin-dabir/vetmeet"
+        }
+      ],
+      "smartEd": [
+        { "title": "SmartEd" },
+        {
+          "desc": "Web application provides a comprehensive platform for instructors and students to interact and facilitate learning"
+        },
+        {
+          "tech": "React, Javascript, axios, express, tailwindcss, mongoose, daisyui"
+        },
+        {
+          "github": "anakin-dabir/smartEd",
+          "link": true,
+          "to": "https://github.com/anakin-dabir/smartEd"
+        }
+      ]
