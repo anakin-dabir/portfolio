@@ -1,7 +1,7 @@
 {
   "personal": {
     "username": "anakin-dabir",
-    "name": "Talha Arshad",
+    "name": "Anakin",
     "github": "https://github.com/anakin-dabir",
     "linkedin": "https://www.linkedin.com/in/anakin-dabir",
     "tagline": [" Full Stack Developer", " React Developer"]
@@ -34,7 +34,7 @@
       "devfum2": [
         { "title": "Full-stack Developer" },
         { "company": "Devfum (Pvt.) Ltd." },
-        { "duration": "Jan 2024 - present" }
+        { "duration": "Jan 2024 - Jul 2024" }
       ]
     }
   },
@@ -116,34 +116,6 @@
           "github": "anakin-dabir/evently-23",
           "link": true,
           "to": "https://github.com/anakin-dabir/evently-23"
-        }
-      ],
-      "vetmeet": [
-        { "title": "VetMeet" },
-        {
-          "desc": "Web based solution to connect with veterans and engage them into community services based on their interests"
-        },
-        {
-          "tech": "React, Javascript, Redux, express, Material-UI, mongoose, twilio"
-        },
-        {
-          "github": "anakin-dabir/vetmeet",
-          "link": true,
-          "to": "https://github.com/anakin-dabir/vetmeet"
-        }
-      ],
-      "smartEd": [
-        { "title": "SmartEd" },
-        {
-          "desc": "Web application provides a comprehensive platform for instructors and students to interact and facilitate learning"
-        },
-        {
-          "tech": "React, Javascript, axios, express, tailwindcss, mongoose, daisyui"
-        },
-        {
-          "github": "anakin-dabir/smartEd",
-          "link": true,
-          "to": "https://github.com/anakin-dabir/smartEd"
         }
       ]
     }
