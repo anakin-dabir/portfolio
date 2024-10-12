@@ -56,9 +56,9 @@ const Evently = () => {
   return <JSONComponent content={json.projects.projects.evently} />;
 };
 
-const Vetmeet = () => {
-  return <JSONComponent content={json.projects.projects.vetmeet} />;
-};
+// const Vetmeet = () => {
+//   return <JSONComponent content={json.projects.projects.vetmeet} />;
+// };
 const SmartED = () => {
   return <JSONComponent content={json.projects.projects.smartEd} />;
 };
@@ -92,10 +92,10 @@ const data = [
         fileName: "SmartEd",
         fileContent: SmartED,
       },
-      {
-        fileName: "Vetmeet",
-        fileContent: Vetmeet,
-      },
+      // {
+      //   fileName: "Vetmeet",
+      //   fileContent: Vetmeet,
+      // },
       {
         fileName: "React",
         fileContent: Project,
