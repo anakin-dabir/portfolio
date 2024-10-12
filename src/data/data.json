@@ -105,7 +105,7 @@
         }
       ],
       "evently": [
-        { "title": "Collaboradocs" },
+        { "title": "Evently" },
         {
           "desc": "a convenient platform for creating, managing, and scheduling events dynamically"
         },
@@ -116,6 +116,20 @@
           "github": "anakin-dabir/evently-23",
           "link": true,
           "to": "https://github.com/anakin-dabir/evently-23"
+        }
+      ],
+      "smartEd": [
+        { "title": "SmartEd" },
+        {
+          "desc": "Web application provides a comprehensive platform for instructors and students to interact and facilitate learning"
+        },
+        {
+          "tech": "React, Javascript, axios, express, tailwindcss, mongoose, daisyui"
+        },
+        {
+          "github": "anakin-dabir/smartEd",
+          "link": true,
+          "to": "https://github.com/anakin-dabir/smartEd"
         }
       ]
     }
