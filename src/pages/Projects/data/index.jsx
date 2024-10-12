@@ -96,10 +96,10 @@ const data = [
       //   fileName: "Vetmeet",
       //   fileContent: Vetmeet,
       // },
-      {
-        fileName: "React",
-        fileContent: Project,
-      },
+      // {
+      //   fileName: "React",
+      //   fileContent: Project,
+      // },
     ],
   },
   {
